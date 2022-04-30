@@ -67,7 +67,7 @@ def load_full(area="nl"):
         ways.append(Segment(nodes_in_way, description))
 
     for route in root.findall("relation"):
-
+        pass
 
 
     pass

@@ -34,8 +34,9 @@ class Segment(POI):
     points: [Point]
     description: str
 
-    def __init__(self, points: [Point]):
+    def __init__(self, points: [Point], description: str):
         self.points = points
+        self.description = description
 
 
 class Point:

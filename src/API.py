@@ -1,7 +1,8 @@
 from __future__ import annotations
-import math
+from util import *
 import data_parser
-import sklearn
+from sklearn.neighbors import KDTree
+
 
 # input: null or area
 # każdy kraj zawiera POI. POI to albo cel albo linia.
@@ -12,82 +13,28 @@ import sklearn
 # countries = {"Netherlands": {"W":, "E":, "S"}}
 #
 
-class CountryData:
-    name: str
-    extremes: dict
-
-
-class Country:
-    POIs: [POI]
-    data: CountryData
-
-    def __init__(self, POIlist: [POI]):
-        self.POIs = POIlist
-
-
-class POI:
-    pass
-
-
-class Station(POI):
-    location: Point
-    name: str
-
-    def __init__(self, point: Point, name: str):
-        self.location = point
-        self.name = name
-
-
-class Segment(POI):
-    points: [Point]
-    start: Point
-    end: Point
-
-    def __init__(self, points: [Point], start: Point, end: Point):
-        self.points = points
-        self.start = start
-        self.end = end
-
-
-class Route:
-    segments: [Segment]
-
-
-class Point:
-    lat: float
-    lon: float
-
-    def __init__(self, lat: float, lon: float):
-        self.lat = lat
-        self.lon = lon
-
-    def distance(self, other: Point) -> float:
-        return math.sqrt(pow(abs(self.lat-other.lat), 2) + pow(abs(self.lon-other.lon), 2))
-
 
 class API:
-    countries: [CountryData]
+    station_locations: KDTree
+    stations: dict[Point, str]
+    data: [[float]]
 
-    def __init__(self):
-        return
-
-
-    @staticmethod
-    def get_closest_station(point: dict) -> Station:
-        new_point = Point(point["lat"], point["lon"])
+    @classmethod
+    def load(cls):
         stations = data_parser.get_stations()
-        result = Station(Point(-1, -1), "")
-        distance = new_point.distance(result.location)
+        return cls(stations)
 
-        # exhaustive search for closest station
-        for station in stations:
-            new_dist = new_point.distance(station.location)
-            if new_dist < distance:
-                distance = new_dist
-                result = station
+    def __init__(self, stations):
+        self.data = []  # to make the KDTree
+        for value in stations:
+            self.data.append(value.get_array())
+        self.station_locations = KDTree(self.data)
+
+    def get_closest_station(self, point: dict) -> Station:
+        new_point = Point(point["lat"], point["lon"])
+        ind = self.station_locations.query({new_point}, return_distance=False)
+        point = self.data[ind]
+        point = Point(point[0], point[1])
+        result = self.stations.get(point)
+        result = Station(point, result)
         return result
-
-
-# track -> trains
-def get_trains_over_track():
-    return

@@ -30,6 +30,9 @@ class Station(POI):
         self.location = point
         self.name = name
 
+    def __eq__(self, other):
+        return (self.location, self.name)== (other.location, other.name)
+
 
 class Segment(POI):
     # List of points is ordered, start and end point are extreme points of the list
@@ -53,7 +56,10 @@ class Point:
         return math.sqrt(pow(abs(self.lat-other.lat), 2) + pow(abs(self.lon-other.lon), 2))
 
     def get_array(self) -> [float]:
-        return {self.lat, self.lon}
+        return [self.lat, self.lon]
+
+    def __eq__(self, other):
+        return (self.lat, self.lon) == (other.lat, other.lon)
 
     def __hash__(self):
         return hash((self.lat, self.lon))

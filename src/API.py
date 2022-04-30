@@ -1,7 +1,7 @@
 from __future__ import annotations
 import math
 import data_parser
-import sklearn
+from sklearn.neighbors import KDTree
 
 # input: null or area
 # każdy kraj zawiera POI. POI to albo cel albo linia.
@@ -27,15 +27,6 @@ class Country:
 
 class POI:
     pass
-
-
-class Station(POI):
-    location: Point
-    name: str
-
-    def __init__(self, point: Point, name: str):
-        self.location = point
-        self.name = name
 
 
 class Segment(POI):
@@ -64,12 +55,16 @@ class Point:
     def distance(self, other: Point) -> float:
         return math.sqrt(pow(abs(self.lat-other.lat), 2) + pow(abs(self.lon-other.lon), 2))
 
+    def __hash__(self):
+        return hash((self.lat, self.lon))
+
 
 class API:
-    countries: [CountryData]
+    station_locations: KDTree
+    stations: dict[Point, str]
 
     def __init__(self):
-        return
+        self.stations = KDTree()
 
 
     @staticmethod

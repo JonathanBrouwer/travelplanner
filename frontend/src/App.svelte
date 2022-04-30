@@ -79,11 +79,11 @@
         attribution: "© OpenStreetMap contributors",
     };
 
-    const focus = (lat, lng) => {
+    const focus = (lat, lng, zoom) => {
         const map = leafletMap.getMap();
 
-        map.setZoom(8);
-        map.setView(new LatLng(lat, lng));
+        let pzoom = typeof zoom !== "undefined"?zoom: 8;
+        map.setView(new LatLng(lat, lng), pzoom);
     }
 
     const remove = (index) => {

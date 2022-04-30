@@ -30,6 +30,15 @@ class Station(POI):
         self.location = point
         self.name = name
 
+class Route:
+    stops: [Point]
+    tracks: [Segment]
+    name: str
+
+    def __init__(self, stops: [Point], tracks: [Segment], name: str):
+        self.stops = stops
+        self.tracks = tracks
+        self.name = name
 
 class Segment(POI):
     # List of points is ordered, start and end point are extreme points of the list

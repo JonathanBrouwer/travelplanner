@@ -25,8 +25,7 @@ class API:
         self.station_locations = KDTree(np.array(self.data))
 
     def get_closest_station(self, point: dict) -> Station:
-        new_point = [[point["lat"], point["lgn"]]]
-        ind = self.station_locations.query(new_point, return_distance=False)
+        ind = self.station_locations.query([[point["lat"], point["lng"]]], return_distance=False)
         point = self.data[ind[0][0]]
         point = Point(point[0], point[1])
         result = self.stations.get(point)

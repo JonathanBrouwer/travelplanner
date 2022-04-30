@@ -6,6 +6,10 @@ export interface Point {
     lng: number,
 }
 
+export interface Station extends Point {
+    name: string,
+}
+
 function onError(reason: any) {
     console.error(reason);
     return null;
@@ -20,11 +24,11 @@ function filterError<T>(o: T): T | null {
     }
 }
 
-export async function getClosestPoint(p: Point): Promise<Point | null> {
+export async function getClosestStation(p: Point): Promise<Station | null> {
     try {
-        const res = await fetch(`/closest_point/`, {
-            credentials: "include",
+        const res = await fetch(`${API_URL}/closest_point`, {
             method: "POST",
+            headers: new Headers({'content-type': 'application/json'}),
             body: JSON.stringify(p)
         });
         return filterError(await res.json());

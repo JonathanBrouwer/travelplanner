@@ -1,5 +1,5 @@
 from __future__ import annotations
-from Util import *
+from util import *
 import data_parser
 from sklearn.neighbors import KDTree
 

@@ -3,12 +3,7 @@
     import {RoutePoint, RoutePointType} from "./data";
     import {flip} from 'svelte/animate';
 
-    let routes = [
-        RoutePoint.randomColour("Amsterdam", RoutePointType.SingleStation),
-        RoutePoint.randomColour("Delft", RoutePointType.SingleStation),
-        RoutePoint.randomColour("Maastricht", RoutePointType.SingleStation),
-        RoutePoint.randomColour("Rotterdam", RoutePointType.SingleStation),
-    ];
+    export let routes;
 
     let selected = null;
     let hovering = null;
@@ -67,6 +62,7 @@
         border-radius: 4px;
         box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
         width: 30em;
+        overflow-y: scroll;
     }
 
     .list-item {

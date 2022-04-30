@@ -1,10 +1,18 @@
 <script lang="ts">
-    import {LeafletMap, Marker, Popup, TileLayer, Tooltip} from 'svelte-leafletjs';
+    import {CircleMarker, LeafletMap, TileLayer} from 'svelte-leafletjs';
     import {onMount} from "svelte";
     import {LatLng, LeafletMouseEvent} from "leaflet";
     import RouteOverview from "./RouteOverview.svelte";
-    import {getClosestPoint, Point} from "./api";
+    import {getClosestStation, Point} from "./api";
+    import {RoutePoint, RoutePointType} from "./data";
 
+    let routepoints: RoutePoint[] = [
+        // RoutePoint.randomColour("Amsterdam", RoutePointType.SingleStation, 0, 0),
+        // RoutePoint.randomColour("Delft", RoutePointType.SingleStation, 0, 0),
+        // RoutePoint.randomColour("Maastricht", RoutePointType.SingleStation, 0, 0),
+        // RoutePoint.randomColour("Rotterdam", RoutePointType.SingleStation, 0, 0),
+    ];
+    let points: Point[] = [];
 
     let mapOptions = {
         center: [0, 0],
@@ -19,17 +27,21 @@
         });
         points = points;
 
-        let closest = await getClosestPoint({
+        let closest = await getClosestStation({
             lat: location.lat,
             lng: location.lng,
         });
 
         if (closest !== null) {
-            points[new_length - 1] = closest;
-        } else {
-            points.splice(new_length - 1, 1);
+            routepoints = [...routepoints, RoutePoint.randomColour(
+                closest.name,
+                RoutePointType.SingleStation,
+                closest.lat,
+                closest.lng,
+            )];
         }
 
+        points.splice(new_length - 1, 1);
         points = points;
     }
 
@@ -60,27 +72,22 @@
         attribution: "© OpenStreetMap contributors",
     };
 
-    let points: Point[] = [];
     let leafletMap: LeafletMap;
 </script>
 
 <div class="main">
-    <RouteOverview/>
+    <RouteOverview routes="{routepoints}"/>
 
     <LeafletMap bind:this={leafletMap} bind:options={mapOptions} on:click={onMapClick}>
         <TileLayer url={tileUrl} options={tileLayerOptions}/>
         <TileLayer url={railUrl} options={tileLayerOptions}/>
-        >
-        <!--        <-->
-        <!--        <Marker latLng={[1.282375, 103.864273]}>-->
-        <!--            <Popup>Gardens by the Bay</Popup>-->
-        <!--            <Tooltip>Gardens by the Bay</Tooltip>-->
-        <!--        </Marker>-->
+
         {#each points as point}
-            <Marker latLng={[point.lat, point.lng]}>
-                <Popup><b>TODO 1</b></Popup>
-                <Tooltip><b>TODO 2</b></Tooltip>
-            </Marker>
+            <CircleMarker latLng={[point.lat, point.lng]} />
+        {/each}
+
+        {#each routepoints as point}
+            <CircleMarker latLng={[point.lat, point.lng]} color="{point.colour}"/>
         {/each}
         <!--        <Polygon latLngs={TestData.sentosaPolygon} color="#ff0000" fillColor="#ff0000">-->
         <!--            <Popup>Sentosa</Popup>-->

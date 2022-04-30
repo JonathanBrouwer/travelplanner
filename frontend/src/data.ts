@@ -1,3 +1,4 @@
+import type {Point} from "./api"
 
 export enum RoutePointType {
     Route,
@@ -19,19 +20,24 @@ const randomColor = (() => {
   };
 })();
 
-export class RoutePoint {
+export class RoutePoint implements Point {
     description: string
     colour: string
     type: RoutePointType
 
-    constructor(description: string, colour: string, type: RoutePointType) {
+    lat: number;
+    lng: number;
+
+    constructor(description: string, colour: string, type: RoutePointType, lat: number, lng: number) {
         this.description = description;
         this.colour = colour;
         this.type = type;
+        this.lat = lat;
+        this.lng = lng;
     }
 
-    static randomColour(description: string, type: RoutePointType): RoutePoint {
-        return new RoutePoint(description, randomColor(), type)
+    static randomColour(description: string, type: RoutePointType, lat: number, lng: number): RoutePoint {
+        return new RoutePoint(description, randomColor(), type, lat, lng)
     }
 }
 

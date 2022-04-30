@@ -3,6 +3,7 @@ from util import *
 import data_parser
 from sklearn.neighbors import KDTree
 
+
 # input: null or area
 # każdy kraj zawiera POI. POI to albo cel albo linia.
 # osobno jest lista krajów
@@ -13,35 +14,27 @@ from sklearn.neighbors import KDTree
 #
 
 
-
-
 class API:
     station_locations: KDTree
     stations: dict[Point, str]
+    data: [[float]]
 
-    def __init__(self):
-        data = data_parser.get_stations()
-        for key, value in data:
-            pass
-        self.station_locations = KDTree()
-
-
-    @staticmethod
-    def get_closest_station(point: dict) -> Station:
-        new_point = Point(point["lat"], point["lon"])
+    @classmethod
+    def load(cls):
         stations = data_parser.get_stations()
-        result = Station(Point(-1, -1), "")
-        distance = new_point.distance(result.location)
+        return cls(stations)
 
-        # exhaustive search for closest station
-        for station in stations:
-            new_dist = new_point.distance(station.location)
-            if new_dist < distance:
-                distance = new_dist
-                result = station
+    def __init__(self, stations):
+        self.data = []  # to make the KDTree
+        for value in stations:
+            self.data.append(value.get_array())
+        self.station_locations = KDTree(self.data)
+
+    def get_closest_station(self, point: dict) -> Station:
+        new_point = Point(point["lat"], point["lon"])
+        ind = self.station_locations.query({new_point}, return_distance=False)
+        point = self.data[ind]
+        point = Point(point[0], point[1])
+        result = self.stations.get(point)
+        result = Station(point, result)
         return result
-
-
-# track -> trains
-def get_trains_over_track():
-    return

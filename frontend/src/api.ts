@@ -37,3 +37,15 @@ export async function getClosestStation(p: Point): Promise<Station | null> {
     }
 }
 
+export async function fuzzySearch(name: string): Promise<Station | null> {
+    try {
+        const res = await fetch(`${API_URL}/fuzzy_search`, {
+            method: "POST",
+            headers: new Headers({'content-type': 'application/json'}),
+            body: JSON.stringify({name: name})
+        });
+        return filterError(await res.json());
+    } catch (e) {
+        return onError(e);
+    }
+}

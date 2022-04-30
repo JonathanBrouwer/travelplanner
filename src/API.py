@@ -4,11 +4,13 @@ import data_parser
 import numpy as np
 from sklearn.neighbors import KDTree
 
-
+from fuzzywuzzy import fuzz
+from fuzzywuzzy import process
 
 class API:
     station_locations: KDTree
     stations: dict[Point, str]
+    stations_reverse: dict[str, Point]
     data: [[float]]
 
     @classmethod
@@ -19,6 +21,10 @@ class API:
 
     def __init__(self, stations):
         self.stations = stations
+        self.stations_reverse = {}
+        for (k, v) in stations.items():
+            self.stations_reverse[v] = k
+
         self.data = []  # to make the KDTree
         for value in stations:
             self.data.append(value.get_array())
@@ -31,3 +37,6 @@ class API:
         result = self.stations.get(point)
         result = Station(point, result)
         return result
+
+    def fuzzy_search(self, name: str) -> [Station]:
+        return [Station(self.stations_reverse[x[0]], x[0]) for x in process.extract(name, self.stations.values(), limit=10)]

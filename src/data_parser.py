@@ -1,7 +1,10 @@
 import xml.etree.ElementTree as ET
 
+from fuzzywuzzy import process
+
 from src.API import Point, Segment
-from src.util import Route
+from src.util import Route, Station
+
 
 class Data:
     stations: dict[Point, str]
@@ -65,4 +68,4 @@ def load_full(area="nl") -> Data:
     return Data(stations, nodes, ways, routes)
 
 if __name__ == '__main__':
-    load_full(area="nl")
+    data = load_full(area="nl")

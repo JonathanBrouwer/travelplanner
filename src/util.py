@@ -1,5 +1,8 @@
 from __future__ import annotations
 
+import math
+
+
 class CountryData:
     name: str
     extremes: dict
@@ -27,18 +30,12 @@ class Station(POI):
 
 
 class Segment(POI):
+    # List of points is ordered, start and end point are extreme points of the list
     points: [Point]
-    start: Point
-    end: Point
+    description: str
 
-    def __init__(self, points: [Point], start: Point, end: Point):
+    def __init__(self, points: [Point]):
         self.points = points
-        self.start = start
-        self.end = end
-
-
-class Route:
-    segments: [Segment]
 
 
 class Point:

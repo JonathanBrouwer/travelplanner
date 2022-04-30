@@ -3,11 +3,13 @@
     import {flip} from 'svelte/animate';
     import Fa from "svelte-fa";
     import {faLink} from "@fortawesome/free-solid-svg-icons";
+    import {RoutePointType} from "./data";
 
     export let routes;
     export let focus;
     export let remove;
     export let merge;
+    export let split;
 
     let selected = null;
     let hovering = null;
@@ -44,7 +46,11 @@
     const select = (index) => {
         selected = index;
 
-        focus(routes[index].lat, routes[index].lng);
+        if (routes[index].type === RoutePointType.SingleStation) {
+            focus(routes[index].lat, routes[index].lng);
+        } else {
+            focus(routes[index].fromobj.lat, routes[index].fromobj.lng);
+        }
     }
 
     const handleInput = () => {
@@ -52,34 +58,44 @@
     }
 </script>
 
-<div class="route-overview">
+<div class="wrapper">
     <input type="text" on:input={handleInput} bind:value={inputValue}>
-    {#each routes as route, index (index)}
-        <div
-                class="list-item"
-                animate:flip
-                draggable=true
-                on:dragstart={event => dragstart(event, index)}
-                on:drop|preventDefault={event => drop(event, index)}
-                ondragover="return false"
-                on:dragenter={() => dragenter(index)}
-                on:click={() => select(index)}
-                class:is-active={selected === index}>
-            <Route route="{route}" remove="{() => remove(index)}"/>
+    <div class="route-overview">
+        {#each routes as route, index (index)}
+            <div
+                    class="list-item"
+                    animate:flip
+                    draggable=true
+                    on:dragstart={event => dragstart(event, index)}
+                    on:drop|preventDefault={event => drop(event, index)}
+                    ondragover="return false"
+                    on:dragenter={() => dragenter(index)}
+                    on:click={() => select(index)}
+                    class:is-active={selected === index}
+                    class:route={route.type === RoutePointType.Route}
+            >
+                <Route route="{route}" remove="{() => remove(index)}" split="{() => split(index)}"/>
 
-            {#if index !== routes.length - 1}
-                <div class="link" on:click={merge(index, index + 1)}>
-                    <Fa icon="{faLink}" />
-                </div>
-            {/if}
-        </div>
-    {/each}
+                {#if index !== routes.length - 1}
+                    <div class="link" on:click|stopPropagation={merge(index, index + 1)}>
+                        <Fa icon="{faLink}"/>
+                    </div>
+                {/if}
+            </div>
+        {/each}
+    </div>
 </div>
-
 <style>
+    .wrapper {
+        display: flex;
+
+        flex-direction: column;
+    }
+
     .link:hover {
         background-color: #99999999;
     }
+
     .link {
         position: relative;
         left: calc(50% - 1em);
@@ -91,12 +107,12 @@
     }
 
     .route-overview {
-        height: 100%;
+        flex-grow: 1;
         background-color: white;
         border-radius: 4px;
         box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
-        width: 30em;
-        overflow-y: scroll;
+        overflow-y: paged-y;
+        overflow-x: hidden;
     }
 
     .list-item {
@@ -106,6 +122,10 @@
         width: 100%;
         height: 5em;
         cursor: pointer;
+    }
+
+    .list-item.route {
+        height: 7.5em;
     }
 
     .list-item:not(:last-child) {

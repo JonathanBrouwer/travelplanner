@@ -2,16 +2,11 @@
     import {CircleMarker, LeafletMap, TileLayer} from 'svelte-leafletjs';
     import {onMount} from "svelte";
     import {LatLng, LeafletMouseEvent} from "leaflet";
-    import RouteOverview, {routes} from "./RouteOverview.svelte";
+    import RouteOverview from "./RouteOverview.svelte";
     import {getClosestStation, onError, Point} from "./api";
     import {RoutePoint, RoutePointType} from "./data";
 
-    let routepoints: RoutePoint[] = [
-        // RoutePoint.randomColour("Amsterdam", RoutePointType.SingleStation, 0, 0),
-        // RoutePoint.randomColour("Delft", RoutePointType.SingleStation, 0, 0),
-        // RoutePoint.randomColour("Maastricht", RoutePointType.SingleStation, 0, 0),
-        // RoutePoint.randomColour("Rotterdam", RoutePointType.SingleStation, 0, 0),
-    ];
+    let routepoints: RoutePoint[] = [];
     let points: Point[] = [];
 
     let mapOptions = {
@@ -39,12 +34,15 @@
             if (typeof found !== "undefined") {
                 onError("duplicate station");
             } else {
-                routepoints = [...routepoints, RoutePoint.randomColour(
+                const rp = RoutePoint.randomColour(
                     closest.name,
                     RoutePointType.SingleStation,
-                    closest.lat,
-                    closest.lng,
-                )];
+                )
+
+                rp.lat = closest.lat;
+                rp.lng = closest.lng;
+
+                routepoints = [...routepoints, rp];
             }
         }
 
@@ -95,16 +93,28 @@
         const olda = routepoints[indexa];
         const oldb = routepoints[indexb];
 
-        routepoints.splice(indexb, 1);
+        const astart = olda.type === RoutePointType.SingleStation ? olda.description : olda.from;
+        const bend = oldb.type === RoutePointType.SingleStation ? oldb.description : oldb.to;
 
-        routepoints[olda] = new RoutePoint(
-            `${olda}`
+        routepoints[indexa] = new RoutePoint(
+            "",
+            olda.colour,
+            RoutePointType.Route,
         )
+
+        routepoints[indexa].from = astart;
+        routepoints[indexa].to = bend;
+        routepoints[indexa].fromobj = olda;
+        routepoints[indexa].toobj = oldb;
+
+
+        routepoints.splice(indexb, 1);
 
         routepoints = routepoints;
     }
 
     let leafletMap: LeafletMap;
+
 </script>
 
 <div class="main">
@@ -119,7 +129,12 @@
         {/each}
 
         {#each routepoints as point}
-            <CircleMarker latLng={[point.lat, point.lng]} color="{point.colour}" radius="{15}"/>
+            {#if point.type === RoutePointType.SingleStation}
+                <CircleMarker latLng={[point.lat, point.lng]} color="{point.colour}" radius="{15}"/>
+            {:else}
+                <CircleMarker latLng={[point.getLatFrom(), point.fromobj.getLngFrom()]} color="{point.colour}" radius="{15}"/>
+                <CircleMarker latLng={[point.getLatTo(), point.getLngTo()]} color="{point.colour}" radius="{15}"/>
+            {/if}
         {/each}
     </LeafletMap>
 </div>

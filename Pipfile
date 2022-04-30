@@ -8,6 +8,7 @@ flask-restful = "*"
 flask = "*"
 flask-cors = "*"
 scikit-learn = "*"
+fuzzywuzzy = "*"
 
 [dev-packages]
 

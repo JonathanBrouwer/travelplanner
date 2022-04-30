@@ -5,6 +5,13 @@ export enum RoutePointType {
     SingleStation,
 }
 
+export class Segment {
+    from_lat: number;
+    from_lng: number;
+    to_lat: number;
+    to_lng: number;
+}
+
 const randomColor = (() => {
   "use strict";
 
@@ -28,22 +35,57 @@ export class RoutePoint implements Point {
     from: string | null
     to: string | null
 
-    lat: number;
-    lng: number;
+    fromobj: RoutePoint | null
+    toobj: RoutePoint | null
 
-    constructor(description: string, colour: string, type: RoutePointType, lat: number, lng: number) {
+    lat: number | null;
+    lng: number | null;
+
+    segments: Segment[];
+
+    constructor(description: string, colour: string, type: RoutePointType) {
         this.description = description;
         this.colour = colour;
         this.type = type;
-        this.lat = lat;
-        this.lng = lng;
-
         this.from = null;
         this.to = null;
+        this.segments = [];
     }
 
-    static randomColour(description: string, type: RoutePointType, lat: number, lng: number): RoutePoint {
-        return new RoutePoint(description, randomColor(), type, lat, lng)
+    static randomColour(description: string, type: RoutePointType): RoutePoint {
+        return new RoutePoint(description, randomColor(), type)
+    }
+
+    getLatTo() {
+        if (this.type == RoutePointType.SingleStation) {
+            return this.lat
+        } else {
+            return this.toobj.getLatTo()
+        }
+    }
+
+    getLatFrom() {
+        if (this.type == RoutePointType.SingleStation) {
+            return this.lat
+        } else {
+            return this.fromobj.getLatFrom()
+        }
+    }
+
+    getLngTo() {
+        if (this.type == RoutePointType.SingleStation) {
+            return this.lng
+        } else {
+            return this.toobj.getLngTo()
+        }
+    }
+
+    getLngFrom() {
+        if (this.type == RoutePointType.SingleStation) {
+            return this.lng
+        } else {
+            return this.fromobj.getLngFrom()
+        }
     }
 }
 

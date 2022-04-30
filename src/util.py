@@ -1,4 +1,6 @@
 from __future__ import annotations
+import math
+
 
 import math
 
@@ -49,6 +51,9 @@ class Point:
 
     def distance(self, other: Point) -> float:
         return math.sqrt(pow(abs(self.lat-other.lat), 2) + pow(abs(self.lon-other.lon), 2))
+
+    def get_array(self) -> [float]:
+        return {self.lat, self.lon}
 
     def __hash__(self):
         return hash((self.lat, self.lon))

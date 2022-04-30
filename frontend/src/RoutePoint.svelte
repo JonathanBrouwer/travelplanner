@@ -1,9 +1,10 @@
 <script lang="ts">
     import {RoutePoint} from "./data";
     import Fa from 'svelte-fa/src/fa.svelte'
-    import { faCross } from '@fortawesome/free-solid-svg-icons'
+    import { faCircleXmark } from '@fortawesome/free-solid-svg-icons'
 
     export let route: RoutePoint;
+    export let remove: () => void;
 </script>
 
 <div class="rp">
@@ -12,18 +13,26 @@
     </div>
     <div class="description">{route.description}</div>
     <div class="remove-wrapper">
-        <div class="remove">
-            <Fa icon="{faCross}" />
+        <div class="remove" on:click|stopPropagation={remove}>
+            <Fa icon="{faCircleXmark}" />
         </div>
     </div>
 </div>
 
 <style>
+    .remove:hover {
+        background-color: orangered;
+
+    }
+
     .remove {
-        height: 1em;
-        width: 1em;
+        height: 1.5em;
+        width: 1.5em;
         border-radius: 50%;
-        display: inline-block;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .remove-wrapper {
@@ -59,7 +68,7 @@
         width: 100%;
         height: 100%;
         display: grid;
-        grid-template-columns: 5em auto 1em;
+        grid-template-columns: 5em auto 2em;
         grid-template-rows: auto;
         grid-template-areas:
             "colour description remove"

@@ -1,12 +1,18 @@
 <script lang="ts">
     import Route from "./RoutePoint.svelte";
-    import {RoutePoint, RoutePointType} from "./data";
     import {flip} from 'svelte/animate';
+    import Fa from "svelte-fa";
+    import {faLink} from "@fortawesome/free-solid-svg-icons";
 
     export let routes;
+    export let focus;
+    export let remove;
+    export let merge;
 
     let selected = null;
     let hovering = null;
+
+    let inputValue = "";
 
     const drop = (event, target) => {
         event.dataTransfer.dropEffect = 'move';
@@ -35,10 +41,19 @@
         selected = index;
     }
 
+    const select = (index) => {
+        selected = index;
+
+        focus(routes[index].lat, routes[index].lng);
+    }
+
+    const handleInput = () => {
+
+    }
 </script>
 
 <div class="route-overview">
-    <input type="text">
+    <input type="text" on:input={handleInput} bind:value={inputValue}>
     {#each routes as route, index (index)}
         <div
                 class="list-item"
@@ -48,14 +63,33 @@
                 on:drop|preventDefault={event => drop(event, index)}
                 ondragover="return false"
                 on:dragenter={() => dragenter(index)}
-                on:click={() => selected=index}
+                on:click={() => select(index)}
                 class:is-active={selected === index}>
-            <Route route="{route}"/>
+            <Route route="{route}" remove="{() => remove(index)}"/>
+
+            {#if index !== routes.length - 1}
+                <div class="link" on:click={merge(index, index + 1)}>
+                    <Fa icon="{faLink}" />
+                </div>
+            {/if}
         </div>
     {/each}
 </div>
 
 <style>
+    .link:hover {
+        background-color: #99999999;
+    }
+    .link {
+        position: relative;
+        left: calc(50% - 1em);
+        bottom: 0.3em;
+        width: fit-content;
+        border-radius: 50%;
+        padding: 0.3em;
+        color: #333333;
+    }
+
     .route-overview {
         height: 100%;
         background-color: white;
@@ -68,6 +102,7 @@
     .list-item {
         display: block;
         padding: 0.5em 1em;
+        box-sizing: border-box;
         width: 100%;
         height: 5em;
         cursor: pointer;

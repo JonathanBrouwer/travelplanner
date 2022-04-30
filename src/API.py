@@ -4,8 +4,21 @@ import data_parser
 import numpy as np
 from sklearn.neighbors import KDTree
 
+<<<<<<< Updated upstream
 from fuzzywuzzy import fuzz
 from fuzzywuzzy import process
+=======
+
+# input: null or area
+# każdy kraj zawiera POI. POI to albo cel albo linia.
+# osobno jest lista krajów
+
+# jak zmapować kraje do współrzędnych?
+# the list of all countries. might be read from a dataset?
+# countries = {"Netherlands": {"W":, "E":, "S"}}
+#
+
+>>>>>>> Stashed changes
 
 class API:
     station_locations: KDTree
@@ -15,9 +28,8 @@ class API:
 
     @classmethod
     def load(cls):
-        data = data_parser.load_full(area="nl")
-        stations = data.stations
-        return cls(stations)
+        stations = data_parser.load_full()
+        return cls(stations.stations)
 
     def __init__(self, stations):
         self.stations = stations

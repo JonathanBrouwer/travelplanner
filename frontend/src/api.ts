@@ -10,7 +10,7 @@ export interface Station extends Point {
     name: string,
 }
 
-function onError(reason: any) {
+export function onError(reason: any) {
     console.error(reason);
     return null;
 }

@@ -2,8 +2,8 @@
     import {CircleMarker, LeafletMap, TileLayer} from 'svelte-leafletjs';
     import {onMount} from "svelte";
     import {LatLng, LeafletMouseEvent} from "leaflet";
-    import RouteOverview from "./RouteOverview.svelte";
-    import {getClosestStation, Point} from "./api";
+    import RouteOverview, {routes} from "./RouteOverview.svelte";
+    import {getClosestStation, onError, Point} from "./api";
     import {RoutePoint, RoutePointType} from "./data";
 
     let routepoints: RoutePoint[] = [
@@ -33,12 +33,19 @@
         });
 
         if (closest !== null) {
-            routepoints = [...routepoints, RoutePoint.randomColour(
-                closest.name,
-                RoutePointType.SingleStation,
-                closest.lat,
-                closest.lng,
-            )];
+            const found = routepoints.find((i) => {
+                return i.description == closest.name;
+            });
+            if (typeof found !== "undefined") {
+                onError("duplicate station");
+            } else {
+                routepoints = [...routepoints, RoutePoint.randomColour(
+                    closest.name,
+                    RoutePointType.SingleStation,
+                    closest.lat,
+                    closest.lng,
+                )];
+            }
         }
 
         points.splice(new_length - 1, 1);
@@ -72,33 +79,48 @@
         attribution: "© OpenStreetMap contributors",
     };
 
+    const focus = (lat, lng) => {
+        const map = leafletMap.getMap();
+
+        map.setZoom(8);
+        map.setView(new LatLng(lat, lng));
+    }
+
+    const remove = (index) => {
+        routepoints.splice(index, 1);
+        routepoints = routepoints;
+    }
+
+    const merge = (indexa, indexb) => {
+        const olda = routepoints[indexa];
+        const oldb = routepoints[indexb];
+
+        routepoints.splice(indexb, 1);
+
+        routepoints[olda] = new RoutePoint(
+            `${olda}`
+        )
+
+        routepoints = routepoints;
+    }
+
     let leafletMap: LeafletMap;
 </script>
 
 <div class="main">
-    <RouteOverview routes="{routepoints}"/>
+    <RouteOverview routes="{routepoints}" focus="{focus}" remove="{remove}" merge="{merge}"/>
 
     <LeafletMap bind:this={leafletMap} bind:options={mapOptions} on:click={onMapClick}>
         <TileLayer url={tileUrl} options={tileLayerOptions}/>
         <TileLayer url={railUrl} options={tileLayerOptions}/>
 
         {#each points as point}
-            <CircleMarker latLng={[point.lat, point.lng]} />
+            <CircleMarker latLng={[point.lat, point.lng]} radius="{15}"/>
         {/each}
 
         {#each routepoints as point}
-            <CircleMarker latLng={[point.lat, point.lng]} color="{point.colour}"/>
+            <CircleMarker latLng={[point.lat, point.lng]} color="{point.colour}" radius="{15}"/>
         {/each}
-        <!--        <Polygon latLngs={TestData.sentosaPolygon} color="#ff0000" fillColor="#ff0000">-->
-        <!--            <Popup>Sentosa</Popup>-->
-        <!--            <Tooltip>Sentosa</Tooltip>-->
-        <!--        </Polygon>-->
-        <!--{#each TestData.sentosaPolygon as point}-->
-        <!--    <CircleMarker latLng={point} radius={3} color="#ff0000" fillColor="#ff0000">-->
-        <!--        <Popup>{point}</Popup>-->
-        <!--        <Tooltip>{point}</Tooltip>-->
-        <!--    </CircleMarker>-->
-        <!--{/each}-->
     </LeafletMap>
 </div>
 

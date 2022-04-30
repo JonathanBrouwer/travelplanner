@@ -25,6 +25,9 @@ export class RoutePoint implements Point {
     colour: string
     type: RoutePointType
 
+    from: string | null
+    to: string | null
+
     lat: number;
     lng: number;
 
@@ -34,6 +37,9 @@ export class RoutePoint implements Point {
         this.type = type;
         this.lat = lat;
         this.lng = lng;
+
+        this.from = null;
+        this.to = null;
     }
 
     static randomColour(description: string, type: RoutePointType, lat: number, lng: number): RoutePoint {

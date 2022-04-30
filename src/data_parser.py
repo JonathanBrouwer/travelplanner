@@ -1,7 +1,5 @@
 import xml.etree.ElementTree as ET
 
-from fuzzywuzzy import process
-
 from src.API import Point, Segment
 from src.util import Route, Station
 

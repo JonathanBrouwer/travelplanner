@@ -13,7 +13,8 @@ class API:
 
     @classmethod
     def load(cls):
-        stations = data_parser.get_stations()
+        data = data_parser.load_full(area="nl")
+        stations = data.stations
         return cls(stations)
 
     def __init__(self, stations):

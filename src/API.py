@@ -29,6 +29,15 @@ class POI:
     pass
 
 
+class Station(POI):
+    location: Point
+    name: str
+
+    def __init__(self, point: Point, name: str):
+        self.location = point
+        self.name = name
+
+
 class Segment(POI):
     points: [Point]
     start: Point

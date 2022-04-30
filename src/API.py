@@ -1,11 +1,13 @@
 from __future__ import annotations
+
+import itertools
+
+import pygtrie
+
 from util import *
 import data_parser
 import numpy as np
 from sklearn.neighbors import KDTree
-
-from fuzzywuzzy import fuzz
-from fuzzywuzzy import process
 
 
 class API:
@@ -19,11 +21,16 @@ class API:
         stations = data_parser.load_full()
         return cls(stations.stations)
 
-    def __init__(self, stations):
+    def __init__(self, stations: dict[Point, str]):
         self.stations = stations
         self.stations_reverse = {}
         for (k, v) in stations.items():
             self.stations_reverse[v] = k
+
+        self.trie: pygtrie.CharTrie = pygtrie.CharTrie()
+        for station in stations.values():
+            station: str
+            self.trie[station.lower()] = station
 
         self.data = []  # to make the KDTree
         for value in stations:
@@ -39,4 +46,12 @@ class API:
         return result
 
     def fuzzy_search(self, name: str) -> [Station]:
-        return [Station(self.stations_reverse[x[0]], x[0]) for x in process.extract(name, self.stations.values(), limit=10)]
+        name = name.lower()
+        if len(name) < 2:
+            results = []
+        else:
+            try:
+                results = list(itertools.islice(self.trie.itervalues(prefix=name), 10))
+            except:
+                results = []
+        return [Station(self.stations_reverse[res], res) for res in results]

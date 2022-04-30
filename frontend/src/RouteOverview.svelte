@@ -4,6 +4,7 @@
     import Fa from "svelte-fa";
     import {faLink} from "@fortawesome/free-solid-svg-icons";
     import {RoutePointType} from "./data";
+    import {fuzzySearch} from "./api";
 
     export let routes;
     export let focus;
@@ -15,6 +16,7 @@
     let hovering = null;
 
     let inputValue = "";
+    let searchResults: [any] = [];
 
     const drop = (event, target) => {
         event.dataTransfer.dropEffect = 'move';
@@ -53,13 +55,28 @@
         }
     }
 
-    const handleInput = () => {
+    const handleInput = async (e) => {
+        let v = e.target.value
+        let result: any = await fuzzySearch(v)
+        console.log(result.result)
+        searchResults = result.result
+    }
 
+    const clickSearchResult = (lat, long) => {
+        focus(lat, long, 14);
+        searchResults = [];
     }
 </script>
 
 <div class="wrapper">
-    <input type="text" on:input={handleInput} bind:value={inputValue}>
+    <input id="searchbar" type="text" on:input={handleInput} bind:value={inputValue}>
+    {#if searchResults.length > 0}
+        <ol id="searchs">
+            {#each searchResults as sr}
+                <li on:click={ () => clickSearchResult(sr.lat, sr.lng) }>{sr.name}</li>
+            {/each}
+        </ol>
+    {/if}
     <div class="route-overview">
         {#each routes as route, index (index)}
             <div
@@ -90,6 +107,25 @@
         display: flex;
 
         flex-direction: column;
+    }
+
+    #searchbar {
+        width: 100%;
+    }
+    #searchs {
+        width: 100%;
+        border: 1px solid black;
+        padding: 3px;
+    }
+    #searchs li {
+        padding: 2px;
+        cursor: pointer;
+    }
+    #searchs li:nth-child(even) {
+        background: #CCC
+    }
+    #searchs li:nth-child(odd) {
+        background: #FFF
     }
 
     .link:hover {

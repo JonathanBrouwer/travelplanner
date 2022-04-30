@@ -30,7 +30,7 @@ class FuzzySearch(Resource):
         stations = interface.fuzzy_search(args["name"])
 
         return {
-            "result": stations
+            "result": [{"name": station.name, "lng": station.location.lon, "lat": station.location.lat} for station in stations]
         }
 
 

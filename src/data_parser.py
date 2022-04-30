@@ -33,7 +33,7 @@ def load_full(area="nl") -> Data:
     mytree = ET.parse("../data/" + area + "_full.xml")
     root = mytree.getroot()
 
-    stations = get_stations(area)
+    stations = get_stations(area="eu")
 
     nodes: dict[int, Point] = {}
     for node in root.findall("node"):

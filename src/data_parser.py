@@ -15,11 +15,26 @@ class Data:
         self.ways = ways
         self.routes = routes
 
+def get_stations(area="nl") -> dict[Point, str]:
+    mytree = ET.parse("../data/" + area + "_railway_stations.xml")
+    root = mytree.getroot()
+
+    stations = {}
+    for node in root.findall("node"):
+        lat = float(node.attrib["lat"])
+        long = float(node.attrib["lon"])
+        names = [tag.attrib["v"] for tag in node.findall("tag") if tag.attrib["k"] == "name"]
+        name = names[0] if len(names) > 0 else ""
+        stations[Point(lat, long)] = name
+
+    return stations
+
 def load_full(area="nl") -> Data:
     mytree = ET.parse("../data/" + area + "_full.xml")
     root = mytree.getroot()
 
-    stations: dict[Point, str] = {}
+    stations = get_stations(area)
+
     nodes: dict[int, Point] = {}
     for node in root.findall("node"):
         idd = int(node.attrib["id"])
@@ -27,13 +42,6 @@ def load_full(area="nl") -> Data:
         long = float(node.attrib["lon"])
         point = Point(lat, long)
         nodes[idd] = point
-
-        tags = node.findall("tag")
-        is_station = len([tag for tag in tags if tag.attrib["k"] == "railway" and (tag.attrib["v"] == "station" or tag.attrib["v"] == "halt")]) > 0
-        if is_station:
-            names = [tag.attrib["v"] for tag in node.findall("tag") if tag.attrib["k"] == "name"]
-            name = names[0] if len(names) > 0 else ""
-            stations[point] = name
 
     ways: dict[int, Segment] = {}
     for way in root.findall("way"):
@@ -54,7 +62,7 @@ def load_full(area="nl") -> Data:
 
         routes.append(Route(stops, tracks, name))
 
-    return Data(stations, nodes, way, routes)
+    return Data(stations, nodes, ways, routes)
 
 if __name__ == '__main__':
     load_full(area="nl")

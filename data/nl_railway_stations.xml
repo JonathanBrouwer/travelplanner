@@ -150,17 +150,6 @@
     <tag k="wikipedia" v="nl:Station Nijmegen"/>
     <tag k="zone" v="6000"/>
   </node>
-  <node id="44324523" version="18" timestamp="2020-06-09T23:00:11Z" uid="0" user="" lat="51.9037705" lon="4.3151182">
-    <tag k="name" v="Vlaardingen West"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="railway:ref" v="VDW"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="wikidata" v="Q7938137"/>
-    <tag k="wikipedia" v="nl:Vlaardingen West (metrostation)"/>
-    <tag k="zone" v="5329"/>
-  </node>
   <node id="44386148" version="12" timestamp="2022-03-24T22:38:45Z" uid="0" user="" lat="51.9172427" lon="5.8549331">
     <tag k="name" v="Elst"/>
     <tag k="public_transport" v="station"/>
@@ -290,18 +279,6 @@
     <tag k="wikipedia" v="nl:Station Veenendaal West"/>
     <tag k="zone" v="4080"/>
   </node>
-  <node id="45018824" version="19" timestamp="2021-11-09T15:43:46Z" uid="0" user="" lat="52.0484521" lon="4.4772981">
-    <tag k="light_rail" v="yes"/>
-    <tag k="name" v="Driemanspolder"/>
-    <tag k="operator" v="HTM"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="station" v="light_rail"/>
-    <tag k="tram" v="yes"/>
-    <tag k="wikidata" v="Q1809110"/>
-    <tag k="wikipedia" v="nl:Driemanspolder (sneltramhalte)"/>
-    <tag k="zone" v="5441"/>
-  </node>
   <node id="45095869" version="17" timestamp="2020-06-09T22:02:11Z" uid="0" user="" lat="52.0664082" lon="5.1432619">
     <tag k="layer" v="2"/>
     <tag k="name" v="Utrecht Lunetten"/>
@@ -313,30 +290,6 @@
     <tag k="wikidata" v="Q2987782"/>
     <tag k="wikipedia" v="nl:Station Utrecht Lunetten"/>
     <tag k="zone" v="5000"/>
-  </node>
-  <node id="45099226" version="12" timestamp="2020-06-26T21:29:05Z" uid="0" user="" lat="52.0667621" lon="4.4786685">
-    <tag k="name" v="Buytenwegh"/>
-    <tag k="operator" v="HTM"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="station" v="light_rail"/>
-    <tag k="tram" v="yes"/>
-    <tag k="wikidata" v="Q2074498"/>
-    <tag k="wikipedia" v="nl:Buytenwegh (sneltramhalte)"/>
-    <tag k="zone" v="5441"/>
-  </node>
-  <node id="45112674" version="14" timestamp="2021-05-18T07:43:24Z" uid="0" user="" lat="52.0698797" lon="4.392994">
-    <tag k="name" v="Forepark"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="ref" v="FPA"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="tram" v="yes"/>
-    <tag k="wheelchair" v="yes"/>
-    <tag k="wikidata" v="Q2547811"/>
-    <tag k="wikipedia" v="nl:Forepark (metro- en sneltramhalte)"/>
-    <tag k="zone" v="5411"/>
   </node>
   <node id="45198301" version="24" timestamp="2021-08-08T14:06:52Z" uid="0" user="" lat="52.0893925" lon="5.109821">
     <tag k="alt_name" v="Utrecht Centraal Station"/>
@@ -490,26 +443,6 @@
     <tag k="wikidata" v="Q801410"/>
     <tag k="wikipedia" v="nl:Station Schiphol Airport"/>
     <tag k="zone" v="5733"/>
-  </node>
-  <node id="46199966" version="11" timestamp="2021-11-29T19:33:43Z" uid="0" user="" lat="52.3302613" lon="4.9560598">
-    <tag k="name" v="Diemen Zuid"/>
-    <tag k="network" v="NS;Amsterdamse metro"/>
-    <tag k="network:subway" v="Amsterdamse metro"/>
-    <tag k="network:train" v="NS"/>
-    <tag k="operator" v="NS;GVB"/>
-    <tag k="operator:subway" v="GVB"/>
-    <tag k="operator:train" v="NS"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="railway:ref" v="Dmnz"/>
-    <tag k="source" v="AND"/>
-    <tag k="start_date" v="1977-10-14"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="train" v="yes"/>
-    <tag k="wheelchair" v="no"/>
-    <tag k="wikipedia" v="nl:Station Diemen Zuid"/>
-    <tag k="zone" v="5715"/>
   </node>
   <node id="46410951" version="14" timestamp="2020-06-09T22:17:52Z" uid="0" user="" lat="52.376736" lon="5.2447045">
     <tag k="name" v="Almere Parkwijk"/>
@@ -675,67 +608,6 @@
     <tag k="wikidata" v="Q2222369"/>
     <tag k="wikipedia" v="nl:Station Vleuten"/>
   </node>
-  <node id="247389009" version="11" timestamp="2020-11-23T12:04:00Z" uid="0" user="" lat="52.0652767" lon="4.5345966">
-    <tag k="name" v="Willem Dreeslaan"/>
-    <tag k="operator" v="HTM"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="station" v="light_rail"/>
-    <tag k="tram" v="yes"/>
-    <tag k="wikidata" v="Q2919772"/>
-    <tag k="wikipedia" v="nl:Willem Dreeslaan (sneltramhalte)"/>
-    <tag k="zone" v="5451"/>
-  </node>
-  <node id="250222266" version="22" timestamp="2018-10-27T21:35:08Z" uid="0" user="" lat="52.3384028" lon="4.8575769">
-    <tag k="name" v="Amstelveenseweg"/>
-    <tag k="network" v="Amsterdamse metro"/>
-    <tag k="operator" v="GVB"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="start_date" v="1997-05-18"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="wheelchair" v="yes"/>
-    <tag k="wikidata" v="Q1846380"/>
-    <tag k="wikipedia" v="nl:Amstelveenseweg (metrostation)"/>
-    <tag k="zone" v="5714"/>
-  </node>
-  <node id="250224485" version="16" timestamp="2020-06-09T22:32:35Z" uid="0" user="" lat="52.3726582" lon="4.8352937">
-    <tag k="name" v="Jan van Galenstraat"/>
-    <tag k="network" v="Amsterdamse metro"/>
-    <tag k="operator" v="GVB"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="start_date" v="1997-05-28"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="wheelchair" v="yes"/>
-    <tag k="wikidata" v="Q3273303"/>
-    <tag k="wikipedia" v="nl:Jan van Galenstraat (metrostation)"/>
-    <tag k="zone" v="5713"/>
-  </node>
-  <node id="250233810" version="21" timestamp="2020-06-09T18:53:55Z" uid="0" user="" lat="52.2979886" lon="4.9601712">
-    <tag k="loc_name" v="Holendrecht"/>
-    <tag k="name" v="Amsterdam Holendrecht"/>
-    <tag k="network" v="NS;Amsterdamse metro"/>
-    <tag k="network:subway" v="Amsterdamse metro"/>
-    <tag k="network:train" v="NS"/>
-    <tag k="operator" v="NS;GVB"/>
-    <tag k="operator:subway" v="GVB"/>
-    <tag k="operator:train" v="NS"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="railway:ref" v="Ashd"/>
-    <tag k="start_date" v="1977-10-14"/>
-    <tag k="start_date:train" v="2008-12-14"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="train" v="yes"/>
-    <tag k="wheelchair" v="yes"/>
-    <tag k="wikidata" v="Q800381"/>
-    <tag k="wikipedia" v="nl:Station Amsterdam Holendrecht"/>
-    <tag k="zone" v="5725"/>
-  </node>
   <node id="270297127" version="7" timestamp="2019-06-15T11:10:20Z" uid="0" user="" lat="51.6480639" lon="5.0543799">
     <tag k="name" v="Station De Oost"/>
     <tag k="railway" v="halt"/>
@@ -746,33 +618,6 @@
     <tag k="railway" v="halt"/>
     <tag k="website" v="https://www.eftepedia.nl/lemma/Station_Marerijk"/>
     <tag k="zone" v="7330"/>
-  </node>
-  <node id="289445435" version="13" timestamp="2018-10-27T21:35:09Z" uid="0" user="" lat="52.3294483" lon="4.9305189">
-    <tag k="name" v="Van der Madeweg"/>
-    <tag k="network" v="Amsterdamse metro"/>
-    <tag k="operator" v="GVB"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="start_date" v="1977-10-14"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="wheelchair" v="yes"/>
-    <tag k="wikidata" v="Q7913863"/>
-    <tag k="wikipedia" v="nl:Van der Madeweg (metrostation)"/>
-    <tag k="zone" v="5715"/>
-  </node>
-  <node id="291982984" version="22" timestamp="2021-05-18T07:43:24Z" uid="0" user="" lat="52.0647304" lon="4.400391">
-    <tag k="name" v="Leidschenveen Centrum"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="ref" v="LVN"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="tram" v="yes"/>
-    <tag k="wheelchair" v="yes"/>
-    <tag k="wikidata" v="Q3300413"/>
-    <tag k="wikipedia" v="nl:Leidschenveen (metro- en sneltramhalte)"/>
-    <tag k="zone" v="5411"/>
   </node>
   <node id="320494336" version="9" timestamp="2020-06-09T22:01:08Z" uid="0" user="" lat="51.9544945" lon="5.8519491">
     <tag k="name" v="Arnhem Zuid"/>
@@ -788,21 +633,6 @@
     <tag k="name" v="Amsteltrein"/>
     <tag k="railway" v="halt"/>
     <tag k="wheelchair" v="yes"/>
-  </node>
-  <node id="427565080" version="15" timestamp="2018-10-27T21:35:09Z" uid="0" user="" lat="52.3317318" lon="4.9176266">
-    <tag k="layer" v="1"/>
-    <tag k="name" v="Overamstel"/>
-    <tag k="network" v="Amsterdamse metro"/>
-    <tag k="operator" v="GVB"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="start_date" v="1990-12-01"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="wheelchair" v="yes"/>
-    <tag k="wikidata" v="Q3371836"/>
-    <tag k="wikipedia" v="nl:Overamstel (metrostation)"/>
-    <tag k="zone" v="5715"/>
   </node>
   <node id="521261183" version="10" timestamp="2020-06-11T01:00:25Z" uid="0" user="" lat="52.7740477" lon="5.1057898">
     <tag k="alt_name" v="Station Medemblik Museumstoomtram"/>
@@ -872,12 +702,6 @@
     <tag k="train" v="yes"/>
     <tag k="wikidata" v="Q2685303"/>
     <tag k="wikipedia" v="nl:Station Geldrop"/>
-  </node>
-  <node id="697290420" version="6" timestamp="2019-12-06T23:08:57Z" uid="0" user="" lat="51.6528103" lon="5.0490113">
-    <tag k="name" v="Monorail"/>
-    <tag k="railway" v="halt"/>
-    <tag k="station" v="monorail"/>
-    <tag k="website" v="https://www.eftepedia.nl/lemma/Monorail"/>
   </node>
   <node id="821254661" version="5" timestamp="2020-06-09T20:53:01Z" uid="0" user="" lat="52.9361531" lon="5.9431983">
     <tag k="name" v="Heerenveen IJsstadion"/>
@@ -1060,14 +884,6 @@
     <tag k="wheelchair" v="no"/>
     <tag k="wikipedia" v="nl:Station Eys-Wittem"/>
   </node>
-  <node id="1780517696" version="5" timestamp="2021-06-28T06:11:35Z" uid="0" user="" lat="52.7560972" lon="7.0274062">
-    <tag k="name:de" v="Feldbahn und Strassenbahn"/>
-    <tag k="name:source" v="http://www.veenpark.nl/d-zug-boot.html"/>
-    <tag k="railway" v="station"/>
-    <tag k="station" v="light_rail"/>
-    <tag k="usage" v="tourism"/>
-    <tag k="wheelchair" v="yes"/>
-  </node>
   <node id="1903163029" version="8" timestamp="2019-03-25T19:19:17Z" uid="0" user="" lat="52.4401918" lon="5.7660752">
     <tag k="name" v="Station Hall of Fame"/>
     <tag k="railway" v="halt"/>
@@ -1226,32 +1042,6 @@
     <tag k="train" v="yes"/>
     <tag k="wikidata" v="Q800395"/>
     <tag k="wikipedia" v="nl:Station Apeldoorn"/>
-  </node>
-  <node id="2237721918" version="8" timestamp="2020-06-09T22:47:18Z" uid="0" user="" lat="52.3796134" lon="4.8382223">
-    <tag k="name" v="De Vlugtlaan"/>
-    <tag k="network" v="Amsterdamse metro"/>
-    <tag k="operator" v="GVB"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="start_date" v="1997-05-28"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="wheelchair" v="yes"/>
-    <tag k="wikidata" v="Q2061210"/>
-    <tag k="wikipedia" v="nl:De Vlugtlaan (metrostation)"/>
-  </node>
-  <node id="2288890193" version="9" timestamp="2021-10-13T19:01:55Z" uid="0" user="" lat="51.8606168" lon="4.3667811">
-    <tag k="location" v="overhead"/>
-    <tag k="name" v="Hoogvliet"/>
-    <tag k="network" v="Rail Rotterdam"/>
-    <tag k="platforms" v="2"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="wheelchair" v="yes"/>
-    <tag k="wikidata" v="Q2091165"/>
-    <tag k="wikipedia" v="nl:Hoogvliet (metrostation)"/>
   </node>
   <node id="2336169715" version="8" timestamp="2022-03-24T22:41:17Z" uid="0" user="" lat="51.573665" lon="4.9934935">
     <tag k="name" v="Tilburg Reeshof"/>
@@ -1617,304 +1407,6 @@
     <tag k="wikipedia" v="nl:Station Utrecht Zuilen"/>
     <tag k="zone" v="5000"/>
   </node>
-  <node id="3146591906" version="4" timestamp="2021-11-25T17:43:29Z" uid="0" user="" lat="52.3257562" lon="4.5983693">
-    <tag k="railway" v="halt"/>
-    <tag k="station" v="monorail"/>
-    <tag k="wheelchair" v="yes"/>
-  </node>
-  <node id="3149917960" version="7" timestamp="2020-06-09T23:00:11Z" uid="0" user="" lat="51.9900765" lon="4.4543595">
-    <tag k="name" v="Berkel Westpolder"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="wheelchair" v="yes"/>
-    <tag k="wikidata" v="Q2737802"/>
-    <tag k="wikipedia" v="nl:Berkel Westpolder (metrostation)"/>
-    <tag k="zone" v="5320"/>
-  </node>
-  <node id="3149917961" version="16" timestamp="2022-04-27T23:13:38Z" uid="0" user="" lat="51.9179985" lon="4.4808632">
-    <tag k="internet_access" v="no"/>
-    <tag k="location" v="underground"/>
-    <tag k="name" v="Beurs"/>
-    <tag k="operator" v="Rotterdamse Elektrische Tram N.V. (RET)"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="wheelchair" v="yes"/>
-    <tag k="wikidata" v="Q2533222"/>
-    <tag k="wikipedia" v="nl:Beurs (metrostation)"/>
-    <tag k="zone" v="5300"/>
-  </node>
-  <node id="3149917962" version="9" timestamp="2022-04-27T22:57:31Z" uid="0" user="" lat="51.9306162" lon="4.4581761">
-    <tag k="name" v="Blijdorp"/>
-    <tag k="network" v="Rail Rotterdam"/>
-    <tag k="operator" v="RET"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="toilets:wheelchair" v="yes"/>
-    <tag k="wheelchair" v="yes"/>
-    <tag k="wikidata" v="Q2403083"/>
-    <tag k="wikipedia" v="nl:Blijdorp (metrostation)"/>
-    <tag k="zone" v="5300"/>
-  </node>
-  <node id="3149917963" version="7" timestamp="2020-06-04T15:53:35Z" uid="0" user="" lat="51.8333189" lon="4.3198989">
-    <tag k="location" v="overhead"/>
-    <tag k="name" v="De Akkers"/>
-    <tag k="network" v="Rail Rotterdam"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="source" v="AND"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="wikidata" v="Q3211386"/>
-    <tag k="wikipedia" v="nl:De Akkers (metrostation)"/>
-    <tag k="zone" v="5336"/>
-  </node>
-  <node id="3149917964" version="9" timestamp="2020-06-26T21:33:02Z" uid="0" user="" lat="51.8377526" lon="4.3316246">
-    <tag k="location" v="overhead"/>
-    <tag k="name" v="Heemraadlaan"/>
-    <tag k="network" v="Rail Rotterdam"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="wikidata" v="Q2178812"/>
-    <tag k="wikipedia" v="nl:Heemraadlaan (metrostation)"/>
-    <tag k="zone" v="5336"/>
-  </node>
-  <node id="3149917966" version="9" timestamp="2020-06-26T18:00:03Z" uid="0" user="" lat="52.0775803" lon="4.3820605">
-    <tag k="name" v="Leidschendam-Voorburg"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="tram" v="yes"/>
-    <tag k="wheelchair" v="yes"/>
-    <tag k="wikipedia" v="nl:Leidschendam-Voorburg (metro- en sneltramhalte)"/>
-    <tag k="zone" v="5413"/>
-  </node>
-  <node id="3149917967" version="10" timestamp="2022-04-27T23:16:10Z" uid="0" user="" lat="51.9140336" lon="4.4819906">
-    <tag k="location" v="underground"/>
-    <tag k="name" v="Leuvehaven"/>
-    <tag k="network" v="Rail Rotterdam"/>
-    <tag k="operator" v="RET"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="wikidata" v="Q2192843"/>
-    <tag k="wikipedia" v="nl:Leuvehaven (metrostation)"/>
-    <tag k="zone" v="5300"/>
-  </node>
-  <node id="3149917968" version="8" timestamp="2022-04-27T23:21:13Z" uid="0" user="" lat="51.8971935" lon="4.4947569">
-    <tag k="location" v="overhead"/>
-    <tag k="name" v="Maashaven"/>
-    <tag k="network" v="Rail Rotterdam"/>
-    <tag k="operator" v="RET"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="wikidata" v="Q2140109"/>
-    <tag k="wikipedia" v="nl:Maashaven (metrostation)"/>
-    <tag k="zone" v="5314"/>
-  </node>
-  <node id="3149917970" version="8" timestamp="2021-11-09T15:25:37Z" uid="0" user="" lat="51.95592" lon="4.462218">
-    <tag k="name" v="Meijersplein"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="wheelchair" v="yes"/>
-    <tag k="wikidata" v="Q2321538"/>
-    <tag k="wikipedia" v="nl:Meijersplein (metrostation)"/>
-    <tag k="zone" v="5310"/>
-  </node>
-  <node id="3149917971" version="7" timestamp="2020-06-04T16:33:42Z" uid="0" user="" lat="51.948473" lon="4.4646343">
-    <tag k="layer" v="1"/>
-    <tag k="name" v="Melanchthonweg"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="wheelchair" v="yes"/>
-    <tag k="wikidata" v="Q2607338"/>
-    <tag k="wikipedia" v="nl:Melanchthonweg (metrostation)"/>
-    <tag k="zone" v="5310"/>
-  </node>
-  <node id="3149917972" version="10" timestamp="2020-06-26T18:00:03Z" uid="0" user="" lat="52.0475517" lon="4.4147041">
-    <tag k="name" v="Nootdorp"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="wikidata" v="Q2369808"/>
-    <tag k="wikipedia" v="nl:Nootdorp (metrostation)"/>
-    <tag k="zone" v="5421"/>
-  </node>
-  <node id="3149917973" version="6" timestamp="2020-06-09T23:00:11Z" uid="0" user="" lat="52.0205662" lon="4.4369745">
-    <tag k="name" v="Pijnacker Centrum"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="wheelchair" v="yes"/>
-    <tag k="wikipedia" v="nl:Pijnacker Centrum (metrostation)"/>
-    <tag k="zone" v="5420"/>
-  </node>
-  <node id="3149917974" version="6" timestamp="2020-06-09T23:00:11Z" uid="0" user="" lat="52.0050029" lon="4.445805">
-    <tag k="name" v="Pijnacker Zuid"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="wheelchair" v="yes"/>
-    <tag k="wikipedia" v="nl:Pijnacker Zuid (metrostation)"/>
-    <tag k="zone" v="5420"/>
-  </node>
-  <node id="3149917975" version="7" timestamp="2020-06-04T16:14:50Z" uid="0" user="" lat="51.8617237" lon="4.3957931">
-    <tag k="name" v="Poortugaal"/>
-    <tag k="network" v="Rail Rotterdam"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="source" v="AND"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="wikidata" v="Q2476031"/>
-    <tag k="wikipedia" v="nl:Poortugaal (metrostation)"/>
-    <tag k="zone" v="5316"/>
-  </node>
-  <node id="3149917976" version="8" timestamp="2020-06-26T21:33:02Z" uid="0" user="" lat="51.8591359" lon="4.4194918">
-    <tag k="name" v="Rhoon"/>
-    <tag k="network" v="Rail Rotterdam"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="source" v="AND"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="wheelchair" v="limited"/>
-    <tag k="wikidata" v="Q1993423"/>
-    <tag k="wikipedia" v="nl:Rhoon (metrostation)"/>
-    <tag k="zone" v="5316"/>
-  </node>
-  <node id="3149917977" version="7" timestamp="2020-06-09T23:00:11Z" uid="0" user="" lat="51.9035842" lon="4.4967979">
-    <tag k="location" v="overhead"/>
-    <tag k="name" v="Rijnhaven"/>
-    <tag k="network" v="Rail Rotterdam"/>
-    <tag k="operator" v="RET"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="wikidata" v="Q1819258"/>
-    <tag k="wikipedia" v="nl:Rijnhaven (metrostation)"/>
-    <tag k="zone" v="5314"/>
-  </node>
-  <node id="3149917978" version="7" timestamp="2020-06-09T23:00:11Z" uid="0" user="" lat="51.9754013" lon="4.4608354">
-    <tag k="name" v="Rodenrijs"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="wheelchair" v="yes"/>
-    <tag k="wikidata" v="Q7356536"/>
-    <tag k="wikipedia" v="nl:Rodenrijs (metrostation)"/>
-    <tag k="zone" v="5320"/>
-  </node>
-  <node id="3149917979" version="8" timestamp="2021-08-10T19:40:13Z" uid="0" user="" lat="51.8465462" lon="4.3344573">
-    <tag k="location" v="overhead"/>
-    <tag k="name" v="Spijkenisse Centrum"/>
-    <tag k="network" v="Rail Rotterdam"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="source" v="AND"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="wheelchair" v="no"/>
-    <tag k="wikidata" v="Q2711032"/>
-    <tag k="wikipedia" v="nl:Spijkenisse Centrum (metrostation)"/>
-    <tag k="zone" v="5336"/>
-  </node>
-  <node id="3149917980" version="10" timestamp="2021-04-04T13:23:30Z" uid="0" user="" lat="51.9232371" lon="4.4785118">
-    <tag k="location" v="underground"/>
-    <tag k="name" v="Stadhuis"/>
-    <tag k="network" v="Rail Rotterdam"/>
-    <tag k="operator" v="RET"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="wikidata" v="Q2038715"/>
-    <tag k="wikipedia" v="nl:Stadhuis (metrostation)"/>
-    <tag k="zone" v="5300"/>
-  </node>
-  <node id="3149917982" version="6" timestamp="2020-06-04T15:53:35Z" uid="0" user="" lat="51.8626297" lon="4.3767716">
-    <tag k="location" v="overhead"/>
-    <tag k="name" v="Tussenwater"/>
-    <tag k="network" v="Rail Rotterdam"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="wikidata" v="Q4292182"/>
-    <tag k="wikipedia" v="nl:Tussenwater (metrostation)"/>
-    <tag k="zone" v="5326"/>
-  </node>
-  <node id="3149917983" version="9" timestamp="2020-06-26T18:00:03Z" uid="0" user="" lat="52.0823292" lon="4.3653147">
-    <tag k="name" v="Voorburg &apos;t Loo"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="tram" v="yes"/>
-    <tag k="wheelchair" v="yes"/>
-    <tag k="wikidata" v="Q7941698"/>
-    <tag k="wikipedia" v="nl:Voorburg &apos;t Loo (metro- en sneltramhalte)"/>
-  </node>
-  <node id="3149917984" version="9" timestamp="2020-06-09T23:00:11Z" uid="0" user="" lat="51.9076988" lon="4.4926485">
-    <tag k="location" v="underground"/>
-    <tag k="name" v="Wilhelminaplein"/>
-    <tag k="network" v="Rail Rotterdam"/>
-    <tag k="operator" v="RET"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="wheelchair" v="yes"/>
-    <tag k="wikidata" v="Q2169211"/>
-    <tag k="wikipedia" v="nl:Wilhelminaplein (metrostation)"/>
-    <tag k="zone" v="5314"/>
-  </node>
-  <node id="3149917985" version="6" timestamp="2020-06-04T15:53:35Z" uid="0" user="" lat="51.8549462" lon="4.3625084">
-    <tag k="name" v="Zalmplaat"/>
-    <tag k="network" v="Rail Rotterdam"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="wikidata" v="Q2566636"/>
-    <tag k="wikipedia" v="nl:Zalmplaat (metrostation)"/>
-    <tag k="zone" v="5326"/>
-  </node>
-  <node id="3149917986" version="11" timestamp="2021-12-24T12:06:03Z" uid="0" user="" lat="51.8868946" lon="4.4883271">
-    <tag k="internet_access" v="no"/>
-    <tag k="location" v="overhead"/>
-    <tag k="name" v="Zuidplein"/>
-    <tag k="network" v="Rail Rotterdam"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="ref" v="ZPL"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="wheelchair" v="yes"/>
-    <tag k="wikidata" v="Q2199766"/>
-    <tag k="wikipedia" v="nl:Zuidplein (metrostation)"/>
-    <tag k="zone" v="5314"/>
-  </node>
   <node id="3234513661" version="6" timestamp="2020-06-09T21:54:01Z" uid="0" user="" lat="51.8272972" lon="5.8224752">
     <tag k="name" v="Nijmegen Goffert"/>
     <tag k="platforms" v="2"/>
@@ -1996,27 +1488,6 @@
     <tag k="wikipedia" v="nl:Station Den Haag Moerwijk"/>
     <tag k="zone" v="5400"/>
   </node>
-  <node id="3504104382" version="11" timestamp="2022-03-25T00:30:57Z" uid="0" user="" lat="52.0789705" lon="4.3432643">
-    <tag k="alt_name" v="Den Haag Laan van Nieuw Oost-Indië"/>
-    <tag k="name" v="Den Haag Laan van NOI"/>
-    <tag k="note:name" v="Schrijfwijze ProRail"/>
-    <tag k="note:short_name" v="Schrijfwijze NS"/>
-    <tag k="old_name" v="Nieuw Oosteinde"/>
-    <tag k="old_name:-1978" v="Laan van Nieuw Oost-Indië"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="railway:ref" v="Laa"/>
-    <tag k="short_name" v="Den Haag Laan v NOI"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="train" v="yes"/>
-    <tag k="tram" v="yes"/>
-    <tag k="website" v="https://www.ns.nl/stationsinformatie/laa/den-haag-laan-v-noi"/>
-    <tag k="wheelchair" v="yes"/>
-    <tag k="wikidata" v="Q800656"/>
-    <tag k="wikipedia" v="nl:Station Den Haag Laan van NOI"/>
-    <tag k="zone" v="5400"/>
-  </node>
   <node id="3505712905" version="5" timestamp="2021-08-17T10:43:31Z" uid="0" user="" lat="52.0909985" lon="4.3700691">
     <tag k="name" v="Den Haag Mariahoeve"/>
     <tag k="public_transport" v="station"/>
@@ -2050,140 +1521,6 @@
     <tag k="wikidata" v="Q2295597"/>
     <tag k="wikipedia" v="nl:Station Den Haag Ypenburg"/>
     <tag k="zone" v="5421"/>
-  </node>
-  <node id="3517452398" version="7" timestamp="2020-06-26T21:29:05Z" uid="0" user="" lat="52.0627697" lon="4.4705733">
-    <tag k="name" v="Voorweg Laag"/>
-    <tag k="operator" v="HTM"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="station" v="light_rail"/>
-    <tag k="tram" v="yes"/>
-    <tag k="wheelchair" v="yes"/>
-    <tag k="wikipedia" v="nl:Voorweg (sneltramhalte)"/>
-    <tag k="zone" v="5441"/>
-  </node>
-  <node id="3517471133" version="6" timestamp="2020-06-26T21:29:05Z" uid="0" user="" lat="52.0629362" lon="4.4711784">
-    <tag k="name" v="Voorweg Hoog"/>
-    <tag k="operator" v="HTM"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="station" v="light_rail"/>
-    <tag k="tram" v="yes"/>
-    <tag k="wikipedia" v="nl:Voorweg (sneltramhalte)"/>
-    <tag k="zone" v="5441"/>
-  </node>
-  <node id="3518163015" version="7" timestamp="2020-06-26T21:29:05Z" uid="0" user="" lat="52.0606493" lon="4.4834971">
-    <tag k="name" v="Centrum-West"/>
-    <tag k="operator" v="HTM"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="station" v="light_rail"/>
-    <tag k="tram" v="yes"/>
-    <tag k="wheelchair" v="yes"/>
-    <tag k="wikidata" v="Q2432005"/>
-    <tag k="wikipedia" v="nl:Centrum-West (sneltramhalte)"/>
-    <tag k="zone" v="5441"/>
-  </node>
-  <node id="3519612824" version="6" timestamp="2020-06-26T21:29:05Z" uid="0" user="" lat="52.0544224" lon="4.4921412">
-    <tag k="name" v="Dorp"/>
-    <tag k="operator" v="HTM"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="station" v="light_rail"/>
-    <tag k="tram" v="yes"/>
-    <tag k="wikidata" v="Q5298715"/>
-    <tag k="wikipedia" v="nl:Dorp (sneltramhalte)"/>
-  </node>
-  <node id="3519649713" version="6" timestamp="2020-06-26T21:29:05Z" uid="0" user="" lat="52.0508275" lon="4.4870404">
-    <tag k="name" v="Delftsewallen"/>
-    <tag k="operator" v="HTM"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="station" v="light_rail"/>
-    <tag k="tram" v="yes"/>
-    <tag k="wikidata" v="Q2184171"/>
-    <tag k="wikipedia" v="nl:Delftsewallen (sneltramhalte)"/>
-  </node>
-  <node id="3519955804" version="7" timestamp="2020-06-26T21:29:05Z" uid="0" user="" lat="52.0554285" lon="4.4699165">
-    <tag k="name" v="Meerzicht"/>
-    <tag k="operator" v="HTM"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="station" v="light_rail"/>
-    <tag k="toilets:wheelchair" v="no"/>
-    <tag k="tram" v="yes"/>
-    <tag k="wheelchair" v="yes"/>
-    <tag k="wikidata" v="Q4439424"/>
-    <tag k="zone" v="5441"/>
-  </node>
-  <node id="3520189614" version="7" timestamp="2020-06-26T21:29:05Z" uid="0" user="" lat="52.0719449" lon="4.4949009">
-    <tag k="name" v="De Leyens"/>
-    <tag k="operator" v="HTM"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="station" v="light_rail"/>
-    <tag k="tram" v="yes"/>
-    <tag k="wikidata" v="Q2785227"/>
-    <tag k="wikipedia" v="nl:De Leyens (sneltramhalte)"/>
-    <tag k="zone" v="5441"/>
-  </node>
-  <node id="3520398377" version="6" timestamp="2020-06-26T21:29:05Z" uid="0" user="" lat="52.0690131" lon="4.5095883">
-    <tag k="name" v="Leidsewallen"/>
-    <tag k="operator" v="HTM"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="station" v="light_rail"/>
-    <tag k="tram" v="yes"/>
-    <tag k="wheelchair" v="limited"/>
-    <tag k="wikidata" v="Q4837566"/>
-    <tag k="wikipedia" v="nl:Leidsewallen (sneltramhalte)"/>
-    <tag k="zone" v="5441"/>
-  </node>
-  <node id="3520700034" version="7" timestamp="2020-06-26T21:29:05Z" uid="0" user="" lat="52.0630519" lon="4.515322">
-    <tag k="name" v="Seghwaert"/>
-    <tag k="operator" v="HTM"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="station" v="light_rail"/>
-    <tag k="tram" v="yes"/>
-    <tag k="wikidata" v="Q2212965"/>
-    <tag k="wikipedia" v="nl:Seghwaert (sneltramhalte)"/>
-    <tag k="zone" v="5441"/>
-  </node>
-  <node id="3520739916" version="7" timestamp="2020-06-26T21:29:05Z" uid="0" user="" lat="52.0596852" lon="4.5064191">
-    <tag k="name" v="Palenstein"/>
-    <tag k="operator" v="HTM"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="station" v="light_rail"/>
-    <tag k="tram" v="yes"/>
-    <tag k="wikidata" v="Q2865415"/>
-    <tag k="wikipedia" v="nl:Palenstein (sneltramhalte)"/>
-    <tag k="zone" v="5441"/>
-  </node>
-  <node id="3526392072" version="8" timestamp="2020-11-23T12:37:46Z" uid="0" user="" lat="52.0603312" lon="4.5426551">
-    <tag k="layer" v="1"/>
-    <tag k="name" v="Oosterheem"/>
-    <tag k="operator" v="HTM"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="station" v="light_rail"/>
-    <tag k="tram" v="yes"/>
-    <tag k="wikidata" v="Q7095443"/>
-    <tag k="wikipedia" v="nl:Oosterheem (sneltramhalte)"/>
-    <tag k="zone" v="5451"/>
-  </node>
-  <node id="3526444979" version="8" timestamp="2021-05-08T11:57:38Z" uid="0" user="" lat="52.0537378" lon="4.5378303">
-    <tag k="name" v="Javalaan"/>
-    <tag k="operator" v="HTM"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="station" v="light_rail"/>
-    <tag k="tram" v="yes"/>
-    <tag k="wheelchair" v="yes"/>
-    <tag k="wikidata" v="Q2312190"/>
-    <tag k="wikipedia" v="nl:Javalaan (sneltramhalte)"/>
-    <tag k="zone" v="5451"/>
   </node>
   <node id="3550867678" version="1" timestamp="2015-05-27T14:11:03Z" uid="0" user="" lat="51.7414665" lon="3.8259024">
     <tag k="name" v="West Repart/Dolfijn (RTM)"/>
@@ -2324,28 +1661,6 @@
     <tag k="wikipedia" v="nl:Station Koudum-Molkwerum"/>
     <tag k="zone" v="2220"/>
   </node>
-  <node id="4005961975" version="8" timestamp="2020-06-09T22:32:35Z" uid="0" user="" lat="52.3122449" lon="4.9470883">
-    <tag k="name" v="Amsterdam Bijlmer ArenA"/>
-    <tag k="network" v="NS;Amsterdamse metro"/>
-    <tag k="network:subway" v="Amsterdamse metro"/>
-    <tag k="network:train" v="NS"/>
-    <tag k="old_name" v="Amsterdam Bijlmer"/>
-    <tag k="operator" v="NS;GVB"/>
-    <tag k="operator:subway" v="GVB"/>
-    <tag k="operator:train" v="NS"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="railway:ref" v="Asb"/>
-    <tag k="source" v="AND"/>
-    <tag k="start_date" v="1971-05-24"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="train" v="yes"/>
-    <tag k="wheelchair" v="yes"/>
-    <tag k="wikidata" v="Q50723"/>
-    <tag k="wikipedia" v="nl:Station Amsterdam Bijlmer ArenA"/>
-    <tag k="zone" v="5725"/>
-  </node>
   <node id="4018000913" version="5" timestamp="2022-03-17T08:02:15Z" uid="0" user="" lat="50.896103" lon="6.0577972">
     <tag k="name" v="Eygelshoven Markt"/>
     <tag k="public_transport" v="station"/>
@@ -2364,26 +1679,6 @@
     <tag k="train" v="yes"/>
     <tag k="wikidata" v="Q2249907"/>
     <tag k="wikipedia" v="nl:Station Heerlen Woonboulevard"/>
-  </node>
-  <node id="4040491812" version="7" timestamp="2021-12-11T17:45:15Z" uid="0" user="" lat="52.3464656" lon="4.9175567">
-    <tag k="addr:city" v="Amsterdam"/>
-    <tag k="addr:postcode" v="1097DN"/>
-    <tag k="name" v="Amsterdam Amstel"/>
-    <tag k="network" v="NS;Amsterdamse metro"/>
-    <tag k="network:subway" v="Amsterdamse metro"/>
-    <tag k="network:train" v="NS"/>
-    <tag k="operator" v="NS;GVB"/>
-    <tag k="operator:subway" v="GVB"/>
-    <tag k="operator:train" v="NS"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="railway:ref" v="Asa"/>
-    <tag k="start_date" v="1939-10-15"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="train" v="yes"/>
-    <tag k="wheelchair" v="limited"/>
-    <tag k="wikipedia" v="nl:Station Amsterdam Amstel"/>
   </node>
   <node id="4041466061" version="8" timestamp="2021-09-19T13:37:48Z" uid="0" user="" lat="51.560531" lon="5.0837293">
     <tag k="addr:city" v="Tilburg"/>
@@ -2472,104 +1767,6 @@
     <tag k="wikipedia" v="nl:Station Culemborg"/>
     <tag k="zone" v="5167"/>
   </node>
-  <node id="4041640589" version="6" timestamp="2020-06-09T22:32:35Z" uid="0" user="" lat="52.296338" lon="4.9890129">
-    <tag k="name" v="Gein"/>
-    <tag k="network" v="Amsterdamse metro"/>
-    <tag k="operator" v="GVB"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="start_date" v="1982-08-27"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="wikidata" v="Q2331863"/>
-    <tag k="wikipedia" v="nl:Gein (metrostation)"/>
-  </node>
-  <node id="4041640590" version="7" timestamp="2020-06-09T22:32:35Z" uid="0" user="" lat="52.2956478" lon="4.9744218">
-    <tag k="name" v="Reigersbos"/>
-    <tag k="network" v="Amsterdamse metro"/>
-    <tag k="operator" v="GVB"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="start_date" v="1982-08-27"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="wheelchair" v="yes"/>
-    <tag k="wikidata" v="Q1941199"/>
-    <tag k="wikipedia" v="nl:Reigersbos (metrostation)"/>
-  </node>
-  <node id="4041642874" version="6" timestamp="2020-06-09T22:32:35Z" uid="0" user="" lat="52.3113175" lon="4.9843223">
-    <tag k="name" v="Gaasperplas"/>
-    <tag k="network" v="Amsterdamse metro"/>
-    <tag k="operator" v="GVB"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="start_date" v="1977-10-14"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="wikidata" v="Q2187835"/>
-    <tag k="wikipedia" v="nl:Gaasperplas (metrostation)"/>
-    <tag k="zone" v="5725"/>
-  </node>
-  <node id="4041662264" version="6" timestamp="2020-06-09T22:32:35Z" uid="0" user="" lat="52.3230792" lon="4.9735502">
-    <tag k="name" v="Ganzenhoef"/>
-    <tag k="network" v="Amsterdamse metro"/>
-    <tag k="operator" v="GVB"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="start_date" v="1977-10-14"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="wheelchair" v="yes"/>
-    <tag k="wikidata" v="Q2534934"/>
-    <tag k="wikipedia" v="nl:Ganzenhoef (metrostation)"/>
-    <tag k="zone" v="5725"/>
-  </node>
-  <node id="4041662265" version="6" timestamp="2020-06-09T22:32:35Z" uid="0" user="" lat="52.3170313" lon="4.9791233">
-    <tag k="name" v="Kraaiennest"/>
-    <tag k="network" v="Amsterdamse metro"/>
-    <tag k="operator" v="GVB"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="start_date" v="1977-10-14"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="wheelchair" v="yes"/>
-    <tag k="wikidata" v="Q3241211"/>
-    <tag k="wikipedia" v="nl:Kraaiennest (metrostation)"/>
-    <tag k="zone" v="5725"/>
-  </node>
-  <node id="4041664287" version="6" timestamp="2021-11-30T13:01:54Z" uid="0" user="" lat="52.3267669" lon="4.9463398">
-    <tag k="name" v="Venserpolder"/>
-    <tag k="network" v="Amsterdamse metro"/>
-    <tag k="operator" v="GVB"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="start_date" v="1977-10-14"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="wheelchair" v="yes"/>
-    <tag k="wikidata" v="Q3184721"/>
-    <tag k="wikipedia" v="nl:Venserpolder (metrostation)"/>
-    <tag k="zone" v="5715"/>
-  </node>
-  <node id="4041666291" version="5" timestamp="2021-12-22T15:55:34Z" uid="0" user="" lat="52.3235282" lon="4.9364854">
-    <tag k="name" v="Duivendrecht"/>
-    <tag k="network" v="NS;Amsterdamse metro"/>
-    <tag k="network:subway" v="Amsterdamse metro"/>
-    <tag k="network:train" v="NS"/>
-    <tag k="operator" v="NS;GVB"/>
-    <tag k="operator:subway" v="GVB"/>
-    <tag k="operator:train" v="NS"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="railway:ref" v="Dvd"/>
-    <tag k="start_date" v="1993-05-23"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="train" v="yes"/>
-    <tag k="wikipedia" v="nl:Station Duivendrecht"/>
-    <tag k="zone" v="5715"/>
-  </node>
   <node id="4046323545" version="5" timestamp="2020-06-09T18:53:55Z" uid="0" user="" lat="52.3370349" lon="4.8902289">
     <tag k="name" v="Amsterdam RAI"/>
     <tag k="network" v="NS"/>
@@ -2583,303 +1780,6 @@
     <tag k="wikidata" v="Q512214"/>
     <tag k="wikipedia" v="nl:Station Amsterdam RAI"/>
     <tag k="zone" v="5714"/>
-  </node>
-  <node id="4046383465" version="5" timestamp="2020-06-09T22:32:35Z" uid="0" user="" lat="52.3185355" lon="4.9413557">
-    <tag k="name" v="Strandvliet"/>
-    <tag k="network" v="Amsterdamse metro"/>
-    <tag k="operator" v="GVB"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="start_date" v="1977-10-14"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="wikidata" v="Q2181403"/>
-    <tag k="wikipedia" v="nl:Strandvliet (metrostation)"/>
-  </node>
-  <node id="4046388677" version="6" timestamp="2020-06-09T22:32:35Z" uid="0" user="" lat="52.3066107" lon="4.9522364">
-    <tag k="name" v="Bullewijk"/>
-    <tag k="network" v="Amsterdamse metro"/>
-    <tag k="operator" v="GVB"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="start_date" v="1977-10-14"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="wheelchair" v="yes"/>
-    <tag k="wikidata" v="Q1986388"/>
-    <tag k="wikipedia" v="nl:Bullewijk (metrostation)"/>
-  </node>
-  <node id="4048801938" version="4" timestamp="2020-06-09T23:00:11Z" uid="0" user="" lat="51.919502" lon="4.5476727">
-    <tag k="access" v="no"/>
-    <tag k="description" v="Remise metro"/>
-    <tag k="name" v="&apos;s-Gravenweg"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="zone" v="5311"/>
-  </node>
-  <node id="4048801939" version="5" timestamp="2021-12-22T21:00:59Z" uid="0" user="" lat="51.9657663" lon="4.5702668">
-    <tag k="internet_access" v="no"/>
-    <tag k="name" v="Ambachtsland"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="wikidata" v="Q2162983"/>
-    <tag k="wikipedia" v="nl:Ambachtsland (sneltramhalte)"/>
-    <tag k="zone" v="5321"/>
-  </node>
-  <node id="4048801940" version="8" timestamp="2021-12-23T20:41:38Z" uid="0" user="" lat="51.9603316" lon="4.5356539">
-    <tag k="addr:city" v="Rotterdam"/>
-    <tag k="addr:housenumber" v="2"/>
-    <tag k="addr:street" v="Binnenhof"/>
-    <tag k="internet_access" v="no"/>
-    <tag k="name" v="Binnenhof"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="wikidata" v="Q4914435"/>
-    <tag k="wikipedia" v="nl:Binnenhof (sneltramhalte)"/>
-    <tag k="zone" v="5321"/>
-  </node>
-  <node id="4048801941" version="5" timestamp="2020-06-09T23:00:11Z" uid="0" user="" lat="51.9313801" lon="4.5895585">
-    <tag k="name" v="Capelle Centrum"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="wikipedia" v="nl:Capelle Centrum (metrostation)"/>
-    <tag k="zone" v="5322"/>
-  </node>
-  <node id="4048801942" version="9" timestamp="2021-12-24T13:03:58Z" uid="0" user="" lat="51.9214526" lon="4.5579589">
-    <tag k="internet_access" v="no"/>
-    <tag k="name" v="Capelsebrug"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="toilets:wheelchair" v="yes"/>
-    <tag k="wheelchair" v="yes"/>
-    <tag k="wikidata" v="Q5035276"/>
-    <tag k="wikipedia" v="nl:Capelsebrug"/>
-    <tag k="zone" v="5311"/>
-  </node>
-  <node id="4048801943" version="4" timestamp="2020-06-09T23:00:11Z" uid="0" user="" lat="51.9094712" lon="4.4582888">
-    <tag k="location" v="underground"/>
-    <tag k="name" v="Coolhaven"/>
-    <tag k="network" v="Rail Rotterdam"/>
-    <tag k="operator" v="RET"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="wikidata" v="Q2396147"/>
-    <tag k="wikipedia" v="nl:Coolhaven (metrostation)"/>
-    <tag k="zone" v="5300"/>
-  </node>
-  <node id="4048801944" version="4" timestamp="2020-06-09T23:00:11Z" uid="0" user="" lat="51.9359471" lon="4.6003816">
-    <tag k="name" v="De Terp"/>
-    <tag k="network" v="Rail Rotterdam"/>
-    <tag k="operator" v="RET"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="wikipedia" v="nl:De Terp (metrostation)"/>
-    <tag k="zone" v="5322"/>
-  </node>
-  <node id="4048801945" version="5" timestamp="2021-12-23T20:35:34Z" uid="0" user="" lat="51.9688713" lon="4.5784685">
-    <tag k="internet_access" v="no"/>
-    <tag k="name" v="De Tochten"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="wikidata" v="Q3127400"/>
-    <tag k="wikipedia" v="nl:De Tochten (sneltramhalte)"/>
-    <tag k="zone" v="5321"/>
-  </node>
-  <node id="4048801946" version="8" timestamp="2021-11-15T01:10:36Z" uid="0" user="" lat="51.9099946" lon="4.4457004">
-    <tag k="location" v="underground"/>
-    <tag k="name" v="Delfshaven"/>
-    <tag k="network" v="Rail Rotterdam"/>
-    <tag k="operator" v="RET"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="wikidata" v="Q2787131"/>
-    <tag k="wikipedia" v="en:Delfshaven metro station"/>
-    <tag k="zone" v="5319"/>
-  </node>
-  <node id="4048801947" version="12" timestamp="2021-02-05T07:35:49Z" uid="0" user="" lat="51.9122378" lon="4.4661162">
-    <tag k="level" v="-1"/>
-    <tag k="location" v="underground"/>
-    <tag k="name" v="Dijkzigt"/>
-    <tag k="network" v="Rail Rotterdam"/>
-    <tag k="operator" v="RET"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="wheelchair" v="yes"/>
-    <tag k="wikidata" v="Q2928667"/>
-    <tag k="wikipedia" v="nl:Dijkzigt (metrostation)"/>
-    <tag k="zone" v="5300"/>
-  </node>
-  <node id="4048801948" version="9" timestamp="2020-06-04T15:37:39Z" uid="0" user="" lat="51.916333" lon="4.4737376">
-    <tag k="location" v="underground"/>
-    <tag k="name" v="Eendrachtsplein"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="wheelchair" v="yes"/>
-    <tag k="wikidata" v="Q2952320"/>
-    <tag k="wikipedia" v="nl:Eendrachtsplein (metrostation)"/>
-    <tag k="zone" v="5300"/>
-  </node>
-  <node id="4048801949" version="10" timestamp="2021-12-24T23:03:54Z" uid="0" user="" lat="51.925903" lon="4.505848">
-    <tag k="internet_access" v="no"/>
-    <tag k="location" v="underground"/>
-    <tag k="name" v="Gerdesiaweg"/>
-    <tag k="network" v="Rail Rotterdam"/>
-    <tag k="operator" v="RET"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="wikidata" v="Q4401021"/>
-    <tag k="wikipedia" v="nl:Gerdesiaweg (metrostation)"/>
-    <tag k="zone" v="5300"/>
-  </node>
-  <node id="4048801950" version="6" timestamp="2021-12-23T20:43:55Z" uid="0" user="" lat="51.957222" lon="4.5494492">
-    <tag k="internet_access" v="no"/>
-    <tag k="name" v="Graskruid"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="wikidata" v="Q2046118"/>
-    <tag k="wikipedia" v="nl:Graskruid (sneltramhalte)"/>
-    <tag k="zone" v="5321"/>
-  </node>
-  <node id="4048801951" version="6" timestamp="2021-12-23T20:40:32Z" uid="0" user="" lat="51.9632093" lon="4.5531639">
-    <tag k="internet_access" v="no"/>
-    <tag k="name" v="Hesseplaats"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="wikidata" v="Q2510831"/>
-    <tag k="wikipedia" v="nl:Hesseplaats (sneltramhalte)"/>
-    <tag k="zone" v="5321"/>
-  </node>
-  <node id="4048801954" version="12" timestamp="2021-12-24T13:04:52Z" uid="0" user="" lat="51.9214103" lon="4.5338512">
-    <tag k="internet_access" v="no"/>
-    <tag k="name" v="Kralingse Zoom"/>
-    <tag k="network" v="Rail Rotterdam"/>
-    <tag k="operator" v="RET"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="wikidata" v="Q2539018"/>
-    <tag k="wikipedia" v="nl:Kralingse Zoom (metrostation)"/>
-    <tag k="zone" v="5311"/>
-  </node>
-  <node id="4048801956" version="6" timestamp="2021-12-23T20:39:26Z" uid="0" user="" lat="51.979685" lon="4.5865432">
-    <tag k="internet_access" v="no"/>
-    <tag k="name" v="Nesselande"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="wikidata" v="Q2349892"/>
-    <tag k="wikipedia" v="nl:Nesselande (metrostation)"/>
-    <tag k="zone" v="5460"/>
-  </node>
-  <node id="4048801957" version="6" timestamp="2021-12-23T20:37:28Z" uid="0" user="" lat="51.964821" lon="4.5614524">
-    <tag k="internet_access" v="no"/>
-    <tag k="name" v="Nieuw Verlaat"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="wikidata" v="Q1959792"/>
-    <tag k="wikipedia" v="nl:Nieuw Verlaat (sneltramhalte)"/>
-    <tag k="zone" v="5321"/>
-  </node>
-  <node id="4048801958" version="5" timestamp="2021-12-23T20:45:51Z" uid="0" user="" lat="51.9452288" lon="4.5546319">
-    <tag k="internet_access" v="no"/>
-    <tag k="name" v="Oosterflank"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="wikidata" v="Q2018845"/>
-    <tag k="wikipedia" v="nl:Oosterflank (sneltramhalte)"/>
-    <tag k="zone" v="5321"/>
-  </node>
-  <node id="4048801959" version="6" timestamp="2021-12-24T23:04:58Z" uid="0" user="" lat="51.9233607" lon="4.4969859">
-    <tag k="internet_access" v="no"/>
-    <tag k="location" v="underground"/>
-    <tag k="name" v="Oostplein"/>
-    <tag k="network" v="Rail Rotterdam"/>
-    <tag k="operator" v="RET"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="wikidata" v="Q2677611"/>
-    <tag k="wikipedia" v="nl:Oostplein (metrostation)"/>
-    <tag k="zone" v="5300"/>
-  </node>
-  <node id="4048801960" version="3" timestamp="2019-12-08T21:52:39Z" uid="0" user="" lat="51.9212698" lon="4.393958">
-    <tag k="name" v="Parkweg"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="source" v="AND"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="wikidata" v="Q2241072"/>
-    <tag k="wikipedia" v="nl:Parkweg (metrostation)"/>
-    <tag k="zone" v="5319"/>
-  </node>
-  <node id="4048801961" version="4" timestamp="2020-06-04T15:53:35Z" uid="0" user="" lat="51.8849426" lon="4.3817895">
-    <tag k="name" v="Pernis"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="wikidata" v="Q2485104"/>
-    <tag k="wikipedia" v="nl:Pernis (metrostation)"/>
-  </node>
-  <node id="4048801962" version="7" timestamp="2021-12-24T13:02:17Z" uid="0" user="" lat="51.9407693" lon="4.5565395">
-    <tag k="internet_access" v="no"/>
-    <tag k="name" v="Prinsenlaan"/>
-    <tag k="note" v="central node between railway and subway station as per OSM wiki"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="wheelchair" v="yes"/>
-    <tag k="wikidata" v="Q2111409"/>
-    <tag k="wikipedia" v="nl:Prinsenlaan (sneltramhalte)"/>
-    <tag k="zone" v="5321"/>
-  </node>
-  <node id="4048801963" version="7" timestamp="2021-12-23T20:42:36Z" uid="0" user="" lat="51.9615094" lon="4.5428712">
-    <tag k="internet_access" v="no"/>
-    <tag k="name" v="Romeynshof"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="wikidata" v="Q1934545"/>
-    <tag k="wikipedia" v="nl:Romeynshof (sneltramhalte)"/>
-    <tag k="zone" v="5321"/>
   </node>
   <node id="4048801964" version="6" timestamp="2020-06-09T23:00:11Z" uid="0" user="" lat="51.9517162" lon="4.5524827">
     <tag k="name" v="Rotterdam Alexander"/>
@@ -2923,18 +1823,6 @@
     <tag k="wikipedia" v="nl:Station Rotterdam Centraal"/>
     <tag k="zone" v="5300"/>
   </node>
-  <node id="4048801968" version="7" timestamp="2021-12-24T13:03:09Z" uid="0" user="" lat="51.9319373" lon="4.5634734">
-    <tag k="internet_access" v="no"/>
-    <tag k="name" v="Schenkel"/>
-    <tag k="note" v="central node between railway and subway station as per OSM wiki"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="wikidata" v="Q2447925"/>
-    <tag k="wikipedia" v="nl:Schenkel (sneltramhalte)"/>
-    <tag k="zone" v="5321"/>
-  </node>
   <node id="4048801969" version="6" timestamp="2022-04-26T20:36:27Z" uid="0" user="" lat="51.9220349" lon="4.4087428">
     <tag k="name" v="Schiedam Centrum"/>
     <tag k="old_name:-1967-05-25" v="Schiedam"/>
@@ -2949,81 +1837,6 @@
     <tag k="wikipedia" v="nl:Station Schiedam Centrum"/>
     <tag k="zone" v="5319"/>
   </node>
-  <node id="4048801970" version="7" timestamp="2021-05-18T15:50:32Z" uid="0" user="" lat="51.8745879" lon="4.4777323">
-    <tag k="location" v="overhead"/>
-    <tag k="name" v="Slinge"/>
-    <tag k="network" v="Rail Rotterdam"/>
-    <tag k="operator" v="RET"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="ref" v="SLG"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="wikidata" v="Q1920818"/>
-    <tag k="wikipedia" v="nl:Slinge (metrostation)"/>
-    <tag k="zone" v="5314"/>
-  </node>
-  <node id="4048801971" version="5" timestamp="2020-06-09T23:00:11Z" uid="0" user="" lat="51.9284776" lon="4.578324">
-    <tag k="name" v="Slotlaan"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="wikipedia" v="nl:Slotlaan (metrostation)"/>
-    <tag k="zone" v="5322"/>
-  </node>
-  <node id="4048801972" version="4" timestamp="2020-06-04T15:53:35Z" uid="0" user="" lat="51.9155498" lon="4.3846339">
-    <tag k="name" v="Troelstralaan"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="wikidata" v="Q2674011"/>
-    <tag k="wikipedia" v="nl:Troelstralaan (metrostation)"/>
-    <tag k="zone" v="5319"/>
-  </node>
-  <node id="4048801973" version="7" timestamp="2020-06-04T15:53:35Z" uid="0" user="" lat="51.9091538" lon="4.3719899">
-    <tag k="name" v="Vijfsluizen"/>
-    <tag k="network" v="Rail Rotterdam"/>
-    <tag k="operator" v="RET"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="railway:ref" v="VSZ"/>
-    <tag k="source" v="AND"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="wheelchair" v="yes"/>
-    <tag k="wikidata" v="Q2097912"/>
-    <tag k="wikipedia" v="nl:Vijfsluizen (metrostation)"/>
-    <tag k="zone" v="5319;5329"/>
-  </node>
-  <node id="4048801974" version="11" timestamp="2021-12-24T23:03:12Z" uid="0" user="" lat="51.9250006" lon="4.5130582">
-    <tag k="internet_access" v="no"/>
-    <tag k="location" v="underground"/>
-    <tag k="name" v="Voorschoterlaan"/>
-    <tag k="network" v="Rail Rotterdam"/>
-    <tag k="operator" v="RET"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="wikidata" v="Q2319722"/>
-    <tag k="wikipedia" v="nl:Voorschoterlaan (metrostation)"/>
-    <tag k="zone" v="5300"/>
-  </node>
-  <node id="4053335995" version="8" timestamp="2021-11-17T09:53:55Z" uid="0" user="" lat="52.3524713" lon="4.8343026">
-    <tag k="name" v="Heemstedestraat"/>
-    <tag k="network" v="Amsterdamse metro"/>
-    <tag k="operator" v="GVB"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="start_date" v="1997-05-18"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="wheelchair" v="limited"/>
-    <tag k="wikidata" v="Q2287739"/>
-    <tag k="wikipedia" v="nl:Heemstedestraat (metrostation)"/>
-  </node>
   <node id="4061881142" version="6" timestamp="2020-08-21T08:42:46Z" uid="0" user="" lat="52.7335031" lon="6.4729673">
     <tag k="name" v="Hoogeveen"/>
     <tag k="name:fy" v="Hegefean"/>
@@ -3037,65 +1850,6 @@
     <tag k="wikidata" v="Q47337"/>
     <tag k="wikipedia" v="nl:Station Hoogeveen"/>
     <tag k="zone" v="1700"/>
-  </node>
-  <node id="4064153245" version="3" timestamp="2020-06-09T22:32:35Z" uid="0" user="" lat="52.328939" lon="4.9662522">
-    <tag k="name" v="Verrijn Stuartweg"/>
-    <tag k="network" v="Amsterdamse metro"/>
-    <tag k="operator" v="GVB"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="start_date" v="1977-10-14"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="wikipedia" v="nl:Verrijn Stuartweg (metrostation)"/>
-  </node>
-  <node id="4073693626" version="6" timestamp="2020-11-08T00:43:46Z" uid="0" user="" lat="52.3399595" lon="4.9210115">
-    <tag k="name" v="Spaklerweg"/>
-    <tag k="network" v="Amsterdamse metro"/>
-    <tag k="operator" v="GVB"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="start_date" v="1982-06-04"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="wikidata" v="Q3364889"/>
-    <tag k="wikipedia" v="nl:Spaklerweg (metrostation)"/>
-  </node>
-  <node id="4073693628" version="4" timestamp="2020-06-09T22:32:35Z" uid="0" user="" lat="52.3544624" lon="4.9120253">
-    <tag k="name" v="Wibautstraat"/>
-    <tag k="network" v="Amsterdamse metro"/>
-    <tag k="operator" v="GVB"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="start_date" v="1977-10-14"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="wikidata" v="Q3186873"/>
-    <tag k="wikipedia" v="nl:Wibautstraat (metrostation)"/>
-  </node>
-  <node id="4073743506" version="6" timestamp="2020-06-09T22:32:35Z" uid="0" user="" lat="52.3713176" lon="4.9008788">
-    <tag k="name" v="Nieuwmarkt"/>
-    <tag k="network" v="Amsterdamse metro"/>
-    <tag k="operator" v="GVB"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="start_date" v="1980-10-11"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="wikidata" v="Q1913095"/>
-    <tag k="wikipedia" v="nl:Nieuwmarkt (metrostation)"/>
-  </node>
-  <node id="4075987791" version="5" timestamp="2020-06-09T22:47:18Z" uid="0" user="" lat="52.3464029" lon="4.8345025">
-    <tag k="name" v="Henk Sneevlietweg"/>
-    <tag k="network" v="Amsterdamse metro"/>
-    <tag k="operator" v="GVB"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="start_date" v="1997-05-18"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="wikidata" v="Q2751200"/>
-    <tag k="wikipedia" v="nl:Henk Sneevlietweg (metrostation)"/>
   </node>
   <node id="4076017504" version="11" timestamp="2022-03-25T04:47:35Z" uid="0" user="" lat="52.3578369" lon="4.8340268">
     <tag k="addr:city" v="Amsterdam"/>
@@ -3120,32 +1874,6 @@
     <tag k="wikidata" v="Q50722"/>
     <tag k="wikipedia" v="nl:Station Amsterdam Lelylaan"/>
     <tag k="zone" v="5713"/>
-  </node>
-  <node id="4077313759" version="6" timestamp="2021-02-22T21:49:52Z" uid="0" user="" lat="52.3951713" lon="4.8507911">
-    <tag k="name" v="Isolatorweg"/>
-    <tag k="network" v="Amsterdamse metro"/>
-    <tag k="operator" v="GVB"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="start_date" v="1997-05-28"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="wikidata" v="Q2146949"/>
-    <tag k="wikipedia" v="nl:Isolatorweg (metrostation)"/>
-  </node>
-  <node id="4077313763" version="7" timestamp="2021-11-01T09:39:57Z" uid="0" user="" lat="52.3642921" lon="4.8339612">
-    <tag k="alt_name" v="Metrostation Postjesweg"/>
-    <tag k="name" v="Postjesweg"/>
-    <tag k="network" v="Amsterdamse metro"/>
-    <tag k="operator" v="GVB"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="start_date" v="1997-05-28"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="wheelchair" v="yes"/>
-    <tag k="wikidata" v="Q2436525"/>
-    <tag k="wikipedia" v="nl:Postjesweg (metrostation)"/>
   </node>
   <node id="4085675596" version="7" timestamp="2022-03-24T22:27:20Z" uid="0" user="" lat="51.6905164" lon="5.2937086">
     <tag k="alt_name" v="Den Bosch"/>
@@ -3759,24 +2487,6 @@
     <tag k="opening_hours" v="Su 11:00-16:30"/>
     <tag k="railway" v="station"/>
   </node>
-  <node id="4958505278" version="2" timestamp="2018-06-07T14:26:56Z" uid="0" user="" lat="52.956147" lon="6.7882087">
-    <tag k="name" v="Recreatiepark Drouwenerzand"/>
-    <tag k="railway" v="halt"/>
-    <tag k="station" v="miniature"/>
-    <tag k="usage" v="tourism"/>
-  </node>
-  <node id="5193927668" version="4" timestamp="2021-06-29T02:21:59Z" uid="0" user="" lat="51.9239359" lon="4.4696361">
-    <tag k="location" v="underground"/>
-    <tag k="name" v="Rotterdam Centraal"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="railway:ref" v="Rtd"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="wikidata" v="Q801388"/>
-    <tag k="wikipedia" v="nl:Station Rotterdam Centraal"/>
-    <tag k="zone" v="5300"/>
-  </node>
   <node id="5252617525" version="4" timestamp="2020-06-09T20:17:06Z" uid="0" user="" lat="53.2047056" lon="6.585821">
     <tag k="name" v="Groningen Europapark"/>
     <tag k="public_transport" v="station"/>
@@ -3836,41 +2546,6 @@
     <tag k="wikidata" v="Q2670554"/>
     <tag k="wikipedia" v="nl:Station Best"/>
   </node>
-  <node id="5267675295" version="5" timestamp="2021-11-30T11:56:19Z" uid="0" user="" lat="52.3391945" lon="4.8742325">
-    <tag k="name" v="Zuid"/>
-    <tag k="network" v="Amsterdamse metro"/>
-    <tag k="operator" v="Gemeentelijk Vervoerbedrijf"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="start_date" v="1990-12-01"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="wheelchair" v="yes"/>
-    <tag k="wikipedia" v="nl:Station Amsterdam Zuid"/>
-  </node>
-  <node id="5267675296" version="6" timestamp="2022-03-25T04:45:04Z" uid="0" user="" lat="52.3890161" lon="4.838877">
-    <tag k="name" v="Station Sloterdijk"/>
-    <tag k="network" v="Amsterdamse metro"/>
-    <tag k="operator" v="GVB"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="start_date" v="1997-05-28"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="wikidata" v="Q50721"/>
-    <tag k="wikipedia" v="nl:Station Amsterdam Sloterdijk"/>
-  </node>
-  <node id="5267735554" version="6" timestamp="2022-02-08T21:10:44Z" uid="0" user="" lat="52.0807633" lon="4.3255311">
-    <tag k="description" v="metrohalte van Den Haag Centraal"/>
-    <tag k="level" v="2"/>
-    <tag k="name" v="Den Haag Centraal"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="wikidata" v="Q200704"/>
-    <tag k="wikipedia" v="nl:Station Den Haag Centraal"/>
-  </node>
   <node id="5311118145" version="5" timestamp="2021-01-15T15:12:15Z" uid="0" user="" lat="50.8501783" lon="5.7052501">
     <tag k="name" v="Maastricht"/>
     <tag k="operator:wikidata" v="Q23076"/>
@@ -3910,75 +2585,6 @@
     <tag k="wikipedia" v="nl:Station Landgraaf"/>
     <tag k="zone" v="6617"/>
   </node>
-  <node id="5320427711" version="4" timestamp="2019-08-18T21:02:00Z" uid="0" user="" lat="51.9101567" lon="4.361647">
-    <tag k="name" v="Vlaardingen Oost"/>
-    <tag k="network" v="Rail Rotterdam"/>
-    <tag k="operator" v="RET"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="railway:ref" v="VDO"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="wikidata" v="Q2578105"/>
-    <tag k="wikipedia" v="nl:Vlaardingen Oost (metrostation)"/>
-    <tag k="zone" v="5329"/>
-  </node>
-  <node id="5320428567" version="6" timestamp="2020-06-09T23:00:11Z" uid="0" user="" lat="51.9031357" lon="4.3438134">
-    <tag k="name" v="Vlaardingen Centrum"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="railway:ref" v="VDC"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="wikidata" v="Q1963260"/>
-    <tag k="wikipedia" v="nl:Vlaardingen Centrum (metrostation)"/>
-    <tag k="zone" v="5329"/>
-  </node>
-  <node id="5320431173" version="6" timestamp="2020-06-09T23:00:11Z" uid="0" user="" lat="51.9164305" lon="4.2537315">
-    <tag k="name" v="Maassluis Centrum"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="railway:ref" v="MSC"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="wikidata" v="Q1868690"/>
-    <tag k="wikipedia" v="nl:Maassluis Centrum (metrostation)"/>
-    <tag k="zone" v="5349"/>
-  </node>
-  <node id="5320433276" version="8" timestamp="2022-04-29T20:21:36Z" uid="0" user="" lat="51.9227659" lon="4.383435">
-    <tag k="name" v="Schiedam Nieuwland"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="railway:ref" v="SDN"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="wheelchair" v="yes"/>
-    <tag k="wikidata" v="Q2044735"/>
-    <tag k="wikipedia" v="nl:Schiedam Nieuwland (metrostation)"/>
-    <tag k="zone" v="5319"/>
-  </node>
-  <node id="5320436262" version="6" timestamp="2020-04-05T15:10:48Z" uid="0" user="" lat="51.9260714" lon="4.235402">
-    <tag k="name" v="Maassluis West"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="railway:ref" v="MSW"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="wikidata" v="Q2333211"/>
-    <tag k="wikipedia" v="nl:Maassluis West (metrostation)"/>
-    <tag k="zone" v="5349"/>
-  </node>
-  <node id="5360384018" version="3" timestamp="2020-06-09T22:32:35Z" uid="0" user="" lat="52.3377124" lon="4.8893261">
-    <tag k="name" v="Station RAI"/>
-    <tag k="network" v="Amsterdamse metro"/>
-    <tag k="operator" v="GVB"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="start_date" v="1990-12-01"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="wikipedia" v="nl:Station Amsterdam RAI"/>
-  </node>
   <node id="5410560059" version="9" timestamp="2020-06-26T21:29:05Z" uid="0" user="" lat="52.0410702" lon="4.5185034">
     <tag k="alt_name" v="BleiZo"/>
     <tag k="name" v="Lansingerland-Zoetermeer"/>
@@ -3991,18 +2597,6 @@
     <tag k="wikidata" v="Q2740322"/>
     <tag k="wikipedia" v="nl:Station Lansingerland-Zoetermeer"/>
   </node>
-  <node id="5424713348" version="7" timestamp="2021-10-12T12:21:04Z" uid="0" user="" lat="52.3774316" lon="4.9009578">
-    <tag k="name" v="Centraal Station"/>
-    <tag k="network" v="Amsterdamse metro"/>
-    <tag k="operator" v="GVB"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="start_date" v="1980-10-11"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="toilets:wheelchair" v="yes"/>
-    <tag k="wheelchair" v="yes"/>
-  </node>
   <node id="5661145776" version="3" timestamp="2022-03-25T01:40:28Z" uid="0" user="" lat="52.5329839" lon="5.9132744">
     <tag k="name" v="Kampen Zuid"/>
     <tag k="public_transport" v="station"/>
@@ -4012,12 +2606,6 @@
     <tag k="wheelchair" v="limited"/>
     <tag k="wikidata" v="Q5085816"/>
     <tag k="wikipedia" v="nl:Station Kampen Zuid"/>
-  </node>
-  <node id="5666171738" version="4" timestamp="2021-06-28T06:12:52Z" uid="0" user="" lat="52.7583275" lon="7.0214422">
-    <tag k="railway" v="halt"/>
-    <tag k="station" v="light_rail"/>
-    <tag k="usage" v="tourism"/>
-    <tag k="wheelchair" v="yes"/>
   </node>
   <node id="5669443996" version="3" timestamp="2020-06-09T21:19:02Z" uid="0" user="" lat="51.9591649" lon="6.2600282">
     <tag k="name" v="Doetinchem De Huet"/>
@@ -4052,71 +2640,6 @@
     <tag k="wikipedia" v="nl:Station Chevremont"/>
     <tag k="zone" v="6627"/>
   </node>
-  <node id="5737467956" version="8" timestamp="2020-06-10T22:39:23Z" uid="0" user="" lat="52.3416064" lon="4.8914727">
-    <tag k="name" v="Europaplein"/>
-    <tag k="network" v="Amsterdamse metro"/>
-    <tag k="operator" v="Gemeentelijk Vervoerbedrijf"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="start_date" v="2018-07-21"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="wikidata" v="Q2875188"/>
-    <tag k="wikipedia" v="nl:Europaplein (metrostation)"/>
-  </node>
-  <node id="5737467957" version="7" timestamp="2020-06-09T22:32:35Z" uid="0" user="" lat="52.3539754" lon="4.8906926">
-    <tag k="name" v="De Pijp"/>
-    <tag k="network" v="Amsterdamse metro"/>
-    <tag k="operator" v="GVB"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="start_date" v="2018-07-21"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="wikidata" v="Q2501300"/>
-    <tag k="wikipedia" v="nl:De Pijp (metrostation)"/>
-  </node>
-  <node id="5737467958" version="9" timestamp="2020-06-09T22:32:35Z" uid="0" user="" lat="52.3606741" lon="4.8911097">
-    <tag k="name" v="Vijzelgracht"/>
-    <tag k="network" v="Amsterdamse metro"/>
-    <tag k="operator" v="GVB"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="start_date" v="2018-07-21"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="wheelchair" v="yes"/>
-    <tag k="wikidata" v="Q2722265"/>
-    <tag k="wikipedia" v="nl:Vijzelgracht (metrostation)"/>
-  </node>
-  <node id="5737467960" version="5" timestamp="2018-10-27T21:35:14Z" uid="0" user="" lat="52.3889316" lon="4.9187004">
-    <tag k="name" v="Noorderpark"/>
-    <tag k="network" v="Amsterdamse metro"/>
-    <tag k="operator" v="GVB"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="start_date" v="2018-07-21"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="wheelchair" v="yes"/>
-    <tag k="wikidata" v="Q2673118"/>
-    <tag k="wikipedia" v="nl:Noorderpark (metrostation)"/>
-  </node>
-  <node id="5737467961" version="8" timestamp="2019-06-12T20:57:27Z" uid="0" user="" lat="52.4019931" lon="4.9323589">
-    <tag k="name" v="Noord"/>
-    <tag k="network" v="Amsterdamse metro"/>
-    <tag k="old_name" v="Buikslotermeerplein"/>
-    <tag k="operator" v="GVB"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="start_date" v="2018-07-21"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="toilets:wheelchair" v="no"/>
-    <tag k="wheelchair" v="yes"/>
-    <tag k="wikidata" v="Q3007607"/>
-    <tag k="wikipedia" v="nl:Noord (metrostation)"/>
-  </node>
   <node id="5977673549" version="6" timestamp="2022-03-25T06:04:30Z" uid="0" user="" lat="52.5278636" lon="6.0512888">
     <tag k="name" v="Zwolle Stadshagen"/>
     <tag k="operator" v="NS"/>
@@ -4129,51 +2652,8 @@
     <tag k="wikidata" v="Q16547929"/>
     <tag k="wikipedia" v="nl:Station Zwolle Stadshagen"/>
   </node>
-  <node id="6028127347" version="7" timestamp="2022-03-11T12:55:33Z" uid="0" user="" lat="52.0470643" lon="4.5289842">
-    <tag k="light_rail" v="yes"/>
-    <tag k="name" v="Van Tuyllpark"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="station" v="light_rail"/>
-    <tag k="wikidata" v="Q2477887"/>
-    <tag k="wikipedia" v="nl:Van Tuyllpark (sneltramhalte)"/>
-  </node>
-  <node id="6202080926" version="3" timestamp="2020-06-09T23:00:11Z" uid="0" user="" lat="51.9325971" lon="4.2248525">
-    <tag k="name" v="Steendijkpolder"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="railway:ref" v="Sdp"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="wikidata" v="Q1844476"/>
-    <tag k="wikipedia" v="nl:Steendijkpolder (metrostation)"/>
-  </node>
-  <node id="6206333075" version="4" timestamp="2022-04-21T00:07:49Z" uid="0" user="" lat="51.9735092" lon="4.1327333">
-    <tag k="name" v="Hoek van Holland Haven"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="railway:ref" v="HHH"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="wikidata" v="Q2792592"/>
-    <tag k="wikipedia" v="nl:Hoek van Holland Haven"/>
-    <tag k="zone" v="5448"/>
-  </node>
   <node id="6483744131" version="2" timestamp="2019-05-20T14:42:15Z" uid="0" user="" lat="52.1505681" lon="5.346539">
     <tag k="railway" v="halt"/>
-  </node>
-  <node id="6501644177" version="3" timestamp="2020-06-09T23:00:11Z" uid="0" user="" lat="51.9514281" lon="4.5519103">
-    <tag k="internet_access" v="no"/>
-    <tag k="name" v="Alexander"/>
-    <tag k="note" v="Station Alexander is in verbouwing. Zie www.stationrotterdamalexander.nl"/>
-    <tag k="operator" v="RET"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="railway:ref" v="ALD"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-    <tag k="wikidata" v="Q801382"/>
-    <tag k="wikipedia" v="nl:Station Rotterdam Alexander"/>
   </node>
   <node id="6943877176" version="9" timestamp="2021-12-20T15:15:27Z" uid="0" user="" lat="51.9911036" lon="4.3646868">
     <tag k="name" v="Delft Campus"/>
@@ -4325,17 +2805,6 @@
     <tag k="train" v="yes"/>
     <tag k="wikidata" v="Q2302483"/>
     <tag k="wikipedia" v="nl:Station Hoevelaken"/>
-  </node>
-  <node id="7392110321" version="7" timestamp="2020-06-26T21:29:05Z" uid="0" user="" lat="52.061088" lon="4.4931162">
-    <tag k="name" v="Stadhuis"/>
-    <tag k="operator" v="HTM"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="station" v="light_rail"/>
-    <tag k="tram" v="yes"/>
-    <tag k="wheelchair" v="yes"/>
-    <tag k="wikipedia" v="nl:Stadhuis (sneltramhalte)"/>
-    <tag k="zone" v="5441"/>
   </node>
   <node id="7413715348" version="3" timestamp="2020-07-28T19:06:05Z" uid="0" user="" lat="53.2915652" lon="6.540409">
     <tag k="name" v="Sauwerd"/>
@@ -6336,102 +4805,6 @@
     <tag k="train" v="yes"/>
     <tag k="wikidata" v="Q177365"/>
     <tag k="wikipedia" v="nl:Station Nisse"/>
-  </node>
-  <node id="7657203017" version="3" timestamp="2021-08-15T12:57:39Z" uid="0" user="" lat="52.0755925" lon="4.3095253">
-    <tag k="light_rail" v="yes"/>
-    <tag k="location" v="underground"/>
-    <tag k="name" v="Grote Markt"/>
-    <tag k="operator" v="HTM"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="station" v="light_rail"/>
-    <tag k="tram" v="yes"/>
-    <tag k="wheelchair" v="yes"/>
-    <tag k="wikidata" v="Q2173663"/>
-    <tag k="wikipedia" v="nl:Grote Markt (tramstation)"/>
-  </node>
-  <node id="7657203018" version="2" timestamp="2020-07-23T00:05:20Z" uid="0" user="" lat="52.0772798" lon="4.3143067">
-    <tag k="light_rail" v="yes"/>
-    <tag k="location" v="underground"/>
-    <tag k="name" v="Spui"/>
-    <tag k="operator" v="HTM"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="station" v="light_rail"/>
-    <tag k="tram" v="yes"/>
-    <tag k="wikidata" v="Q2709985"/>
-    <tag k="wikipedia" v="nl:Spui (tramstation)"/>
-  </node>
-  <node id="7657203019" version="3" timestamp="2022-02-08T21:10:44Z" uid="0" user="" lat="52.0810996" lon="4.3242084">
-    <tag k="description" v="lightrailhalte van Den Haag Centraal"/>
-    <tag k="light_rail" v="yes"/>
-    <tag k="name" v="Centraal Station"/>
-    <tag k="operator" v="HTM"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="station" v="light_rail"/>
-    <tag k="tram" v="yes"/>
-    <tag k="wikidata" v="Q200704"/>
-    <tag k="wikipedia" v="nl:Station Den Haag Centraal"/>
-  </node>
-  <node id="7657203020" version="4" timestamp="2021-11-09T15:59:28Z" uid="0" user="" lat="52.0799782" lon="4.3349578">
-    <tag k="light_rail" v="yes"/>
-    <tag k="name" v="Beatrixkwartier"/>
-    <tag k="operator" v="HTM"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="station" v="light_rail"/>
-    <tag k="tram" v="yes"/>
-    <tag k="wheelchair" v="yes"/>
-    <tag k="wikidata" v="Q1913935"/>
-    <tag k="wikipedia" v="nl:Beatrixkwartier (sneltramhalte)"/>
-  </node>
-  <node id="9071577583" version="1" timestamp="2021-09-07T20:16:47Z" uid="0" user="" lat="52.162351" lon="4.4320244">
-    <tag k="internet_access" v="no"/>
-    <tag k="light_rail" v="yes"/>
-    <tag k="name" v="Wassenaarse Wetering/Zandwinning"/>
-    <tag k="network" v="Stoomtrein Katwijk - Leiden"/>
-    <tag k="operator" v="Stoomtrein Katwijk - Leiden"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="station" v="light_rail"/>
-  </node>
-  <node id="9071577584" version="1" timestamp="2021-09-07T20:16:47Z" uid="0" user="" lat="52.1594278" lon="4.4437818">
-    <tag k="internet_access" v="yes"/>
-    <tag k="light_rail" v="yes"/>
-    <tag k="name" v="Museum"/>
-    <tag k="network" v="Stoomtrein Katwijk - Leiden"/>
-    <tag k="operator" v="Stoomtrein Katwijk - Leiden"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="station" v="light_rail"/>
-  </node>
-  <node id="9071577585" version="1" timestamp="2021-09-07T20:16:47Z" uid="0" user="" lat="52.1664288" lon="4.4436949">
-    <tag k="internet_access" v="no"/>
-    <tag k="light_rail" v="yes"/>
-    <tag k="name" v="Museumdepot"/>
-    <tag k="network" v="Stoomtrein Katwijk - Leiden"/>
-    <tag k="operator" v="Stoomtrein Katwijk - Leiden"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="station" v="light_rail"/>
-  </node>
-  <node id="9167352325" version="2" timestamp="2021-11-11T14:34:14Z" uid="0" user="" lat="52.3791977" lon="4.9009058">
-    <tag k="alt_name" v="Amsterdam Centraal Station"/>
-    <tag k="layer" v="-3"/>
-    <tag k="name" v="Centraal Station"/>
-    <tag k="operator" v="Gemeentelijk Vervoerbedrijf"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="station" v="subway"/>
-    <tag k="subway" v="yes"/>
-  </node>
-  <node id="9570781849" version="1" timestamp="2022-03-11T12:51:38Z" uid="0" user="" lat="52.0415172" lon="4.5191922">
-    <tag k="light_rail" v="yes"/>
-    <tag k="name" v="Lansingerland-Zoetermeer"/>
-    <tag k="public_transport" v="station"/>
-    <tag k="railway" v="station"/>
-    <tag k="station" v="light_rail"/>
   </node>
   <node id="9604567339" version="4" timestamp="2022-04-22T10:58:01Z" uid="0" user="" lat="52.166319" lon="4.482286">
     <tag k="name" v="Leiden Centraal"/>

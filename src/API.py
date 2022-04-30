@@ -1,4 +1,7 @@
 from __future__ import annotations
+from util import *
+import data_parser
+from sklearn.neighbors import KDTree
 
 # input: null or area
 # każdy kraj zawiera POI. POI to albo cel albo linia.
@@ -10,64 +13,33 @@ from __future__ import annotations
 #
 
 
-class Country:
-    POIs: [POI]
-
-    def __init__(self, POIlist: [POI]):
-        self.POIs = POIlist
-
-class POI:
-    pass
 
 
-class Station(POI):
-    location: Point
-    name: str
+class API:
+    station_locations: KDTree
+    stations: dict[Point, str]
 
-    def __init__(self, point: Point, name: str):
-        self.location = point
-        self.name = name
-
-
-class Segment(POI):
-    points: [Point]
-    start: Station
-    end: Station
-
-    def __init__(self, points: [Point], start: Station, end: Station):
-        self.points = points
-        self.start = start
-        self.end = end
+    def __init__(self):
+        data = data_parser.get_stations()
+        for key, value in data:
+            pass
+        self.station_locations = KDTree()
 
 
-class Route:
-    segments: [Segment]
+    @staticmethod
+    def get_closest_station(point: dict) -> Station:
+        new_point = Point(point["lat"], point["lon"])
+        stations = data_parser.get_stations()
+        result = Station(Point(-1, -1), "")
+        distance = new_point.distance(result.location)
 
-
-class Point:
-    lat: float
-    lon: float
-
-    def __init__(self, lat: float, lon: float):
-        self.lat = lat
-        self.lon = lon
-
-    def distance(self, other: Point):
-        self.lat-other.lat
-
-# get coordinates. find out which countries are in range. request countries. return POI
-def get_tracks(area: dict):
-    # find which countries are in range
-    # request countries
-    result = {}
-    # for each country, filter elements that are within the coordinates
-    #
-    return result
-
-
-def get_closest_station(point: dict):
-    new_point = Point(point["lat"], point["lon"])
-    # se
+        # exhaustive search for closest station
+        for station in stations:
+            new_dist = new_point.distance(station.location)
+            if new_dist < distance:
+                distance = new_dist
+                result = station
+        return result
 
 
 # track -> trains

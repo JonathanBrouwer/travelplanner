@@ -27,6 +27,7 @@
     "typescript": "^4.0.0"
   },
   "dependencies": {
+    "@anoram/leaflet-svelte": "^0.0.7-1",
     "sirv-cli": "^2.0.0",
     "svelte-leafletjs": "^0.8.2"
   }

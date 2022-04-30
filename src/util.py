@@ -31,8 +31,17 @@ class Station(POI):
         self.name = name
 
     def __eq__(self, other):
-        return (self.location, self.name)== (other.location, other.name)
+        return (self.location, self.name) == (other.location, other.name)
 
+class Route:
+    stops: [Point]
+    tracks: [Segment]
+    name: str
+
+    def __init__(self, stops: [Point], tracks: [Segment], name: str):
+        self.stops = stops
+        self.tracks = tracks
+        self.name = name
 
 class Segment(POI):
     # List of points is ordered, start and end point are extreme points of the list

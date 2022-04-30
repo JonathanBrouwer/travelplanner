@@ -5,15 +5,6 @@ import numpy as np
 from sklearn.neighbors import KDTree
 
 
-# input: null or area
-# każdy kraj zawiera POI. POI to albo cel albo linia.
-# osobno jest lista krajów
-
-# jak zmapować kraje do współrzędnych?
-# the list of all countries. might be read from a dataset?
-# countries = {"Netherlands": {"W":, "E":, "S"}}
-#
-
 
 class API:
     station_locations: KDTree
@@ -22,7 +13,8 @@ class API:
 
     @classmethod
     def load(cls):
-        stations = data_parser.get_stations()
+        data = data_parser.load_full(area="nl")
+        stations = data.stations
         return cls(stations)
 
     def __init__(self, stations):

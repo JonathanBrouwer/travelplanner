@@ -1,45 +1,22 @@
 import xml.etree.ElementTree as ET
 
 from src.API import Point, Segment
+from src.util import Route
 
-def get_stations(area="nl") -> dict[Point, str]:
-    mytree = ET.parse("../data/" + area + "_railway_stations.xml")
-    root = mytree.getroot()
+class Data:
+    stations: dict[Point, str]
+    nodes: dict[int, Point]
+    ways: dict[int, Segment]
+    routes: [Route]
 
-    stations = {}
-    for node in root.findall("node"):
-        lat = float(node.attrib["lat"])
-        long = float(node.attrib["lon"])
-        names = [tag.attrib["v"] for tag in node.findall("tag") if tag.attrib["k"] == "name"]
-        name = names[0] if len(names) > 0 else ""
-        stations[Point(lat, long)] = name
+    def __init__(self, stations, nodes, ways, routes):
+        self.stations = stations
+        self.nodes = nodes
+        self.ways = ways
+        self.routes = routes
 
-    return stations
-
-def get_tracks(area="nl") -> [Segment]:
-    mytree = ET.parse("../data/" + area + "_railway_tracks.xml")
-    root = mytree.getroot()
-
-    points: dict[int, Point] = {}
-    for node in root.findall("node"):
-        idd = int(node.attrib["id"])
-        lat = float(node.attrib["lat"])
-        long = float(node.attrib["lon"])
-        points[idd] = Point(lat, long)
-
-    segments: [Segment] = []
-    for way in root.findall("way"):
-        nodes = [points[int(nd.attrib["ref"])] for nd in way.findall("nd")]
-        descriptions = [tag.attrib["v"] for tag in way.findall("tag") if tag.attrib["k"] == "description"]
-        description = descriptions[0] if len(descriptions) > 0 else ""
-
-        segments.append(Segment(nodes, description))
-
-    return segments
-
-
-def load_full(area="nl"):
-    mytree = ET.parse("../data/" + area + "_railway_tracks.xml")
+def load_full(area="nl") -> Data:
+    mytree = ET.parse("../data/" + area + "_full.xml")
     root = mytree.getroot()
 
     stations: dict[Point, str] = {}
@@ -58,20 +35,26 @@ def load_full(area="nl"):
             name = names[0] if len(names) > 0 else ""
             stations[point] = name
 
-    ways: [Segment] = []
+    ways: dict[int, Segment] = {}
     for way in root.findall("way"):
+        idd = int(way.attrib["id"])
         nodes_in_way = [nodes[int(nd.attrib["ref"])] for nd in way.findall("nd")]
         descriptions = [tag.attrib["v"] for tag in way.findall("tag") if tag.attrib["k"] == "description"]
         description = descriptions[0] if len(descriptions) > 0 else ""
 
-        ways.append(Segment(nodes_in_way, description))
+        ways[idd] = Segment(nodes_in_way, description)
 
+    routes: [Route] = []
     for route in root.findall("relation"):
-        pass
+        stops = [nodes[int(member.attrib["ref"])] for member in route.findall("member") if member.attrib["type"] == "node" and int(member.attrib["ref"]) in nodes]
+        tracks = [ways[int(member.attrib["ref"])] for member in route.findall("member") if member.attrib["type"] == "way" and int(member.attrib["ref"]) in ways]
 
+        names = [tag.attrib["v"] for tag in route.findall("tag") if tag.attrib["k"] == "name"]
+        name = names[0] if len(names) > 0 else ""
 
-    pass
+        routes.append(Route(stops, tracks, name))
 
+    return Data(stations, nodes, way, routes)
 
 if __name__ == '__main__':
     load_full(area="nl")

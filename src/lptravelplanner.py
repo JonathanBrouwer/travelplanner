@@ -30,9 +30,9 @@ def lpsolver(stations,start,end,tracks,choicepoints,choicetracks,length,costs,A,
         model += lpSum(T[i,j] for j in range(nrstations)) >= P[i]       #if a point is passed, at least one track incident to it has to be used
         model += P[i] >= choicepoints[i]                                #pass a point if it's in the user's preferences
         
-    print(model)
+    #print(model)
 
-    model.solve()
+    model.solve(GUROBI_CMD())
 
     print(pulp.value(model.objective))
     print(LpStatus[model.status])
@@ -41,13 +41,38 @@ def lpsolver(stations,start,end,tracks,choicepoints,choicetracks,length,costs,A,
         for j in range(nrstations):
             print("T_{}{} = ".format(i,j), T[i,j].varValue)
 
+    route = getRoute(T,start,end,nrstations)
+    print(route)
+    return route
+
+def getNext(T,here,prev,nrstations):
+    for nxt in range(nrstations):
+        if T[here,nxt].varValue and prev != nxt:
+            return "T_{}{}".format(here,nxt), here, nxt
+
+def getRoute(T,start,end,nrstations):
+    for nxt in range(nrstations):
+        if T[start,nxt].varValue:
+            route = ["T_{}{}".format(start,nxt)]
+            break
+    if nxt == end:
+        return route
+    else:
+        track, prev, here = getNext(T,nxt,start,nrstations)
+        route.append(track)
+        while here != end:
+            track, prev, here = getNext(T,here,prev,nrstations)
+            route.append(track)
+        return route
+        
+
 
 stations = ['a','b','c','d']
 
-start = 'b'
-end = 'd'
+start = 'c'
+end = 'a'
 
-tracks = [[0,1,1,0],[1,0,1,1],[1,1,0,1],[0,1,1,1]]
+tracks = [[0,1,1,0],[1,0,1,1],[1,1,0,1],[0,1,1,0]]
 
 choicepoints = [0,1,0,1]
 

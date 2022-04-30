@@ -88,6 +88,7 @@ fabric.properties
 # modules.xml
 # .idea/misc.xml
 # *.ipr
+.idea/*
 
 # Sonarlint plugin
 # https://plugins.jetbrains.com/plugin/7973-sonarlint
@@ -112,3 +113,6 @@ fabric.properties
 .idea/codestream.xml
 
 # End of https://www.toptal.com/developers/gitignore/api/pycharm
+
+
+raw_data/*

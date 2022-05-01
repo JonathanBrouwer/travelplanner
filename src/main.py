@@ -37,21 +37,31 @@ class FuzzySearch(Resource):
 class Route(Resource):
     def post(self):
         parser = reqparse.RequestParser()
-        parser.add_argument('station1', type=str, location='json')
-        parser.add_argument('station2', type=str, location='json')
+        parser.add_argument('lat1', type=float, location='json')
+        parser.add_argument('lng1', type=float, location='json')
+        parser.add_argument('lat2', type=float, location='json')
+        parser.add_argument('lng2', type=float, location='json')
         args = parser.parse_args()
 
+        print(args)
+
+        res = interface.get_route_between_stations({
+            "start": {
+                "lat": args["lat1"],
+                "lng": args["lng1"],
+            },
+            "end": {
+                "lat": args["lat2"],
+                "lng": args["lng2"],
+            }
+        })
+
+        print(res)
 
         return {
-            "segments": [
-                {
-                    "lat1": 0,
-                    "lng1": 0,
-                    "lat2": 2,
-                    "lng2": 2,
-                },
-            ]
+            "segments": [[[p.lat, p.lon] for p in i.points] for i in res]
         }
+
 
 api.add_resource(ClosestPoint, "/closest_point")
 api.add_resource(Route, "/route")

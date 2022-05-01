@@ -110,3 +110,6 @@ class Node:
 
     def set_previous(self, node: Node):
         self.previous = node
+
+    def __lt__(self, other):
+        return True

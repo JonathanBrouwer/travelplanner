@@ -6,10 +6,7 @@ export enum RoutePointType {
 }
 
 export class Segment {
-    from_lat: number;
-    from_lng: number;
-    to_lat: number;
-    to_lng: number;
+    parts: [number, number][]
 }
 
 const randomColor = (() => {

@@ -3,7 +3,7 @@
     import {onMount} from "svelte";
     import {LatLng, LeafletMouseEvent} from "leaflet";
     import RouteOverview from "./RouteOverview.svelte";
-    import {getClosestStation, onError, Point} from "./api";
+    import {getClosestStation, getRoute, onError, Point} from "./api";
     import {RoutePoint, RoutePointType} from "./data";
 
     let routepoints: RoutePoint[] = [];
@@ -107,17 +107,29 @@
         const astart = olda.type === RoutePointType.SingleStation ? olda.description : olda.from;
         const bend = oldb.type === RoutePointType.SingleStation ? oldb.description : oldb.to;
 
-        routepoints[indexa] = new RoutePoint(
+        let r = new RoutePoint(
             "",
             olda.colour,
             RoutePointType.Route,
         )
 
-        routepoints[indexa].from = astart;
-        routepoints[indexa].to = bend;
-        routepoints[indexa].fromobj = olda;
-        routepoints[indexa].toobj = oldb;
+        r.from = astart;
+        r.to = bend;
+        r.fromobj = olda;
+        r.toobj = oldb;
 
+        routepoints[indexa] = r;
+
+        getRoute(
+            r.getLatFrom(),
+            r.getLngFrom(),
+            r.getLatTo(),
+            r.getLngTo(),
+        ).then((res) => {
+            r.segments = res;
+            console.log(res);
+            routepoints = routepoints;
+        })
 
         routepoints.splice(indexb, 1);
 

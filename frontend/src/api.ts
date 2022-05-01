@@ -1,3 +1,4 @@
+import type {Segment} from "./data";
 
 const API_URL = "http://localhost:8081"
 
@@ -50,12 +51,12 @@ export async function fuzzySearch(name: string): Promise<Station | null> {
     }
 }
 
-export async function getRoute(station1: string, station2: string): Promise<Station | null> {
+export async function getRoute(lat1: number, lng1: number, lat2: number, lng2: number): Promise<Segment[] | null> {
     try {
         const res = await fetch(`${API_URL}/route`, {
             method: "POST",
             headers: new Headers({'content-type': 'application/json'}),
-            body: JSON.stringify({station1, station2})
+            body: JSON.stringify({lat1, lng1, lat2, lng2})
         });
         return filterError(await res.json());
     } catch (e) {

@@ -28,10 +28,10 @@ class API:
 
     @classmethod
     def load(cls):
-        data = data_parser.load_full(area="eu")
+        data = data_parser.load_full(area="nl")
         global cool_data
         cool_data = data
-        return cls(data.stations)
+        return cls(data.stations, data.ways)
 
     def __init__(self, stations: dict[Point, str], ways: dict[int, Segment] = None):
         self.stations = stations
@@ -78,7 +78,7 @@ class API:
 
     def get_segment_endpoints(self, point: dict) -> [Point]:
         new_point = [[point["lat"], point["lng"]]]
-        ind = self.segment_endpoints.query_radius(new_point, r=0.001, return_distance=False)
+        ind = self.segment_endpoints.query_radius(new_point, r=0.01, return_distance=False)
         ind = ind[0]
         result = []
         for i in ind:
@@ -105,11 +105,15 @@ class API:
         heuristic = lambda x: x.distance(end_as_point)  # heuristic function
         # list of: heuristic value, actual point, total distance from start, set of segments
         start_points = list(map(lambda x: (heuristic(x), x, 0.0, Node(None)), self.get_segment_endpoints(start)))
+
+
         heapq.heapify(start_points)
         end_segments = self.get_segment_endpoints(end)
-        end_points = set()
-        for seg in end_segments:
-            end_points.add(seg)
+        end_points = set(end_segments)
+
+        if len(start_points) == 0:
+            return set()
+
         current = heapq.heappop(start_points)
         while current[1] not in end_points:
             new_segs = self.segments[current[1]]
@@ -122,6 +126,7 @@ class API:
                     heapq.heappush(start_points, (heuristic(seg.get_end())+seg.length, seg.get_end(), current[2]+seg.length, s))
             current = heapq.heappop(start_points)
         return self.make_set(current[3])
+
     def fuzzy_search(self, name: str) -> [Station]:
         name = name.lower()
         if len(name) < 2:

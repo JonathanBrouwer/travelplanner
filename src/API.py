@@ -94,6 +94,16 @@ class API:
             result.add(node.current)
         return result
 
+    def get_approximate_segments(self, point:Point) -> [Segment]:
+        ind = self.segment_endpoints.query_radius([[point.lat, point.lon]], r=0.0001, return_distance=False)
+        ind = ind[0]
+        result = []
+        for i in ind:
+            point = self.segment_data[i]
+            point = Point(point[0], point[1])
+            result.extend(self.segments[point])
+        return result
+
 
 
     def get_route_between_stations(self, data: dict) -> set[Segment]:
@@ -125,7 +135,7 @@ class API:
                 continue
 
             visited.add(current[1])
-            new_segs = self.segments[current[1]]
+            new_segs = self.get_approximate_segments(current[1])
             for seg in new_segs:
                 s = Node(seg)
                 s.set_previous(current[3])

@@ -97,7 +97,22 @@ class API:
         return result
 
     def get_approximate_segments(self, point:Point) -> [Segment]:
-        ind = self.segment_endpoints.query_radius([[point.lat, point.lon]], r=0.0001, return_distance=False)
+        ind = self.segment_endpoints.query_radius([[point.lat, point.lon]], r=0.001, return_distance=False)
+        ind = ind[0]
+        result = []
+        for i in ind:
+            point = self.segment_data[i]
+            point = Point(point[0], point[1])
+            result.extend(self.segments[point])
+        return result
+
+    def get_all_segments(self, data: dict) -> set[Segment]:
+        start = data["start"]
+        end = data["end"]
+        start_point = Point(start["lat"], start["lng"])
+        end_point = Point(end["lat"], end["lng"])
+        radius = start_point.distance(end_point)
+        ind = self.segment_endpoints.query_radius([[start_point.lat, start_point.lon]], r=radius, return_distance=False)
         ind = ind[0]
         result = []
         for i in ind:

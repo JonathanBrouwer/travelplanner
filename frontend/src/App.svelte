@@ -1,5 +1,5 @@
 <script lang="ts">
-    import {CircleMarker, LeafletMap, TileLayer} from 'svelte-leafletjs';
+    import {CircleMarker, LeafletMap, TileLayer, Polyline} from 'svelte-leafletjs';
     import {onMount} from "svelte";
     import {LatLng, LeafletMouseEvent} from "leaflet";
     import RouteOverview from "./RouteOverview.svelte";
@@ -60,7 +60,6 @@
             console.error(err.message)
         })
 
-
         leafletMap.getMap().on("click", onMapClick)
     })
 
@@ -91,7 +90,7 @@
     const focus = (lat, lng, zoom) => {
         const map = leafletMap.getMap();
 
-        let pzoom = typeof zoom !== "undefined"?zoom: 8;
+        let pzoom = typeof zoom !== "undefined" ? zoom : 8;
         map.setView(new LatLng(lat, lng), pzoom);
     }
 
@@ -141,7 +140,7 @@
 </script>
 
 <div class="main">
-    <RouteOverview routes="{routepoints}" focus="{focus}" remove="{remove}" merge="{merge}" split="{split}" />
+    <RouteOverview routes="{routepoints}" focus="{focus}" remove="{remove}" merge="{merge}" split="{split}"/>
 
     <LeafletMap bind:this={leafletMap} bind:options={mapOptions} on:click={onMapClick}>
         <TileLayer url={tileUrl} options={tileLayerOptions}/>
@@ -155,7 +154,11 @@
             {#if point.type === RoutePointType.SingleStation}
                 <CircleMarker latLng={[point.lat, point.lng]} color="{point.colour}" radius="{15}"/>
             {:else}
-                <CircleMarker latLng={[point.getLatFrom(), point.fromobj.getLngFrom()]} color="{point.colour}" radius="{15}"/>
+                {console.log(point.segments)}
+                <Polyline latLngs={point.segments}>
+                </Polyline>
+                <CircleMarker latLng={[point.getLatFrom(), point.fromobj.getLngFrom()]} color="{point.colour}"
+                              radius="{15}"/>
                 <CircleMarker latLng={[point.getLatTo(), point.getLngTo()]} color="{point.colour}" radius="{15}"/>
             {/if}
         {/each}

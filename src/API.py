@@ -114,8 +114,18 @@ class API:
         if len(start_points) == 0:
             return set()
 
+        visited = set()
+
         current = heapq.heappop(start_points)
         while current[1] not in end_points:
+            if len(start_points) == 0:
+                return set()
+
+            if current[1] in visited:
+                current = heapq.heappop(start_points)
+                continue
+
+            visited.add(current[1])
             new_segs = self.segments[current[1]]
             for seg in new_segs:
                 s = Node(seg)

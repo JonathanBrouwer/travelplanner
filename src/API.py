@@ -155,7 +155,7 @@ class API:
             for seg in new_segs:
                 s = Node(seg)
                 s.set_previous(current[3])
-                if seg.get_start() != current[1]:
+                if seg.get_start().distance(current[1]) > 0.001:
                     heapq.heappush(start_points, (heuristic(seg.get_start())+seg.length, seg.get_start(), current[2]+seg.length, s))
                 else:
                     heapq.heappush(start_points, (heuristic(seg.get_end())+seg.length, seg.get_end(), current[2]+seg.length, s))

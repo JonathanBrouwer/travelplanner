@@ -34,7 +34,27 @@ class FuzzySearch(Resource):
         }
 
 
+class Route(Resource):
+    def post(self):
+        parser = reqparse.RequestParser()
+        parser.add_argument('station1', type=str, location='json')
+        parser.add_argument('station2', type=str, location='json')
+        args = parser.parse_args()
+
+
+        return {
+            "segments": [
+                {
+                    "lat1": 0,
+                    "lng1": 0,
+                    "lat2": 2,
+                    "lng2": 2,
+                },
+            ]
+        }
+
 api.add_resource(ClosestPoint, "/closest_point")
+api.add_resource(Route, "/route")
 api.add_resource(FuzzySearch, "/fuzzy_search")
 app.run(host="0.0.0.0", port=8081, debug=True)
 

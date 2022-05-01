@@ -97,7 +97,7 @@ class API:
         return result
 
     def get_approximate_segments(self, point:Point) -> [Segment]:
-        ind = self.segment_endpoints.query_radius([[point.lat, point.lon]], r=0.0001, return_distance=False)
+        ind = self.segment_endpoints.query_radius([[point.lat, point.lon]], r=0.001, return_distance=False)
         ind = ind[0]
         result = []
         for i in ind:
@@ -128,10 +128,10 @@ class API:
 
         current = heapq.heappop(start_points)
         while current[1] not in end_points:
-            if len(start_points) == 0:
-                return set()
-
             if current[1] in visited:
+                if len(start_points) == 0:
+                    return set()
+
                 current = heapq.heappop(start_points)
                 continue
 
@@ -144,6 +144,10 @@ class API:
                     heapq.heappush(start_points, (heuristic(seg.get_start())+seg.length, seg.get_start(), current[2]+seg.length, s))
                 else:
                     heapq.heappush(start_points, (heuristic(seg.get_end())+seg.length, seg.get_end(), current[2]+seg.length, s))
+
+            if len(start_points) == 0:
+                return set()
+
             current = heapq.heappop(start_points)
         return self.make_set(current[3])
 

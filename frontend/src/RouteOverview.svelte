@@ -51,7 +51,7 @@
         if (routes[index].type === RoutePointType.SingleStation) {
             focus(routes[index].lat, routes[index].lng);
         } else {
-            focus(routes[index].fromobj.lat, routes[index].fromobj.lng);
+            focus(routes[index].getLatFrom(), routes[index].getLngFrom());
         }
     }
 
@@ -66,6 +66,7 @@
         focus(lat, long, 14);
         searchResults = [];
     }
+
 </script>
 
 <div class="wrapper">

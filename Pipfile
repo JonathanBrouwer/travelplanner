@@ -9,6 +9,7 @@ flask = "*"
 flask-cors = "*"
 scikit-learn = "*"
 fuzzywuzzy = "*"
+pygtrie = "*"
 
 [dev-packages]
 

@@ -77,6 +77,17 @@
         attribution: "© OpenStreetMap contributors",
     };
 
+    const split = (index) => {
+        const route = routepoints[index];
+        if (route.type == RoutePointType.SingleStation) {
+            return;
+        }
+
+        routepoints[index] = route.fromobj;
+        routepoints.splice(index + 1, 0, route.toobj);
+        routepoints = routepoints;
+    }
+
     const focus = (lat, lng, zoom) => {
         const map = leafletMap.getMap();
 
@@ -118,7 +129,7 @@
 </script>
 
 <div class="main">
-    <RouteOverview routes="{routepoints}" focus="{focus}" remove="{remove}" merge="{merge}"/>
+    <RouteOverview routes="{routepoints}" focus="{focus}" remove="{remove}" merge="{merge}" split="{split}" />
 
     <LeafletMap bind:this={leafletMap} bind:options={mapOptions} on:click={onMapClick}>
         <TileLayer url={tileUrl} options={tileLayerOptions}/>

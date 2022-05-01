@@ -78,14 +78,13 @@ class API:
 
     def get_segment_endpoints(self, point: dict) -> [Point]:
         new_point = [[point["lat"], point["lng"]]]
-        ind = self.segment_endpoints.query_radius(new_point, r=0.01, return_distance=False)
-        ind = ind[0]
-        result = []
-        for i in ind:
-            point = self.segment_data[i]
-            pointt = Point(point[0], point[1])
-            result.append(pointt)
-        return result
+        ind = self.segment_endpoints.query(new_point, return_distance=False)
+        ind = ind[0][0]
+        point = self.segment_data[ind]
+        pointt = Point(point[0], point[1])
+        if pointt.distance(Point(new_point[0][0], new_point[0][1]))> 0.01:
+            return []
+        return [pointt]
 
     def make_set(self, node:Node) -> set[Segment]:
         result = set()

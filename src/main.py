@@ -59,7 +59,11 @@ class Route(Resource):
         print(res)
 
         return {
-            "segments": [[[p.lat, p.lon] for p in i.points] for i in res]
+            "segments": [
+                [[p.lat, p.lon] for p in i.points]
+                for i in res
+                if i is not None
+            ]
         }
 
 

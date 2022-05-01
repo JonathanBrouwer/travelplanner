@@ -58,7 +58,11 @@ export async function getRoute(lat1: number, lng1: number, lat2: number, lng2: n
             headers: new Headers({'content-type': 'application/json'}),
             body: JSON.stringify({lat1, lng1, lat2, lng2})
         });
-        return filterError(await res.json());
+
+        const contents = await res.json();
+
+
+        return contents["segments"];
     } catch (e) {
         return onError(e);
     }

@@ -54,6 +54,8 @@ class API:
             for value in ways.values():
                 start = value.get_start()
                 end = value.get_end()
+                if start == end:
+                    continue
                 if start not in self.segments.keys():
                     self.segments[start] = [value]
                     self.segment_data.append(start.get_array())
@@ -103,7 +105,6 @@ class API:
             point = Point(point[0], point[1])
             result.extend(self.segments[point])
         return result
-
 
 
     def get_route_between_stations(self, data: dict) -> set[Segment]:

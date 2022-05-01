@@ -60,20 +60,29 @@ class API:
             self.segments = {}
             self.segment_data = []
             for value in new_ways:
-                start = value.get_start()
-                end = value.get_end()
-                if start == end:
-                    continue
-                if start not in self.segments.keys():
-                    self.segments[start] = [value]
-                    self.segment_data.append(start.get_array())
-                else:
-                    self.segments[start].append(value)
-                if end not in self.segments.keys():
-                    self.segments[end] = [value]
-                    self.segment_data.append(end.get_array())
-                else:
-                    self.segments[end].append(value)
+                for point in value.points:
+                    if point not in self.segments.keys():
+                        self.segments[point] = [value]
+                        self.segment_data.append(point.get_array())
+                    else:
+                        self.segments[point].append(value)
+
+
+
+                # start = value.get_start()
+                # end = value.get_end()
+                # if start == end:
+                #     continue
+                # if start not in self.segments.keys():
+                #     self.segments[start] = [value]
+                #     self.segment_data.append(start.get_array())
+                # else:
+                #     self.segments[start].append(value)
+                # if end not in self.segments.keys():
+                #     self.segments[end] = [value]
+                #     self.segment_data.append(end.get_array())
+                # else:
+                #     self.segments[end].append(value)
 
             self.segment_endpoints = KDTree(np.array(self.segment_data))
 

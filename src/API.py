@@ -49,11 +49,13 @@ class API:
         self.station_locations = KDTree(np.array(self.station_data))
 
         if ways is not None:
-            new_ways: [Segment] = []
-            for way in ways.values():
-                way: Segment
-                for i in range(len(way.points) - 1):
-                    new_ways.append(Segment([way.points[i], way.points[i + 1]], way.description))
+            # new_ways: [Segment] = []
+            # for way in ways.values():
+            #     way: Segment
+            #     for i in range(len(way.points) - 1):
+            #         new_ways.append(Segment([way.points[i], way.points[i + 1]], way.description))
+
+            new_ways = ways.values()
 
             self.segments = {}
             self.segment_data = []
@@ -169,12 +171,16 @@ class API:
                 penalty = dis * 5
                 new_distance = current[2] + seg.length + penalty
 
-                if seg.get_start().distance(current[1]) > seg.get_end().distance(current[1]):
+                for point in seg.points:
+                    heapq.heappush(start_points, (heuristic(point), point, new_distance, s))
+
+
+                # if seg.get_start().distance(current[1]) > seg.get_end().distance(current[1]):
                     # heapq.heappush(start_points, (heuristic(seg.get_start()) + new_distance, seg.get_start(), new_distance, s))
-                    heapq.heappush(start_points, (heuristic(seg.get_start()), seg.get_start(), new_distance, s))
-                else:
+                    # heapq.heappush(start_points, (heuristic(seg.get_start()), seg.get_start(), new_distance, s))
+                # else:
                     # heapq.heappush(start_points, (heuristic(seg.get_end()) + new_distance, seg.get_end(), new_distance, s))
-                    heapq.heappush(start_points, (heuristic(seg.get_end()), seg.get_end(), new_distance, s))
+                    # heapq.heappush(start_points, (heuristic(seg.get_end()), seg.get_end(), new_distance, s))
 
 
             if len(start_points) == 0:

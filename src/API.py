@@ -28,7 +28,7 @@ class API:
 
     @classmethod
     def load(cls):
-        data = data_parser.load_full(area="nl")
+        data = data_parser.load_full(area="eu")
         global cool_data
         cool_data = data
         return cls(data.stations, data.ways)

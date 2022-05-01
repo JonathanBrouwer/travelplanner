@@ -3,15 +3,10 @@
     import {onMount} from "svelte";
     import {LatLng, LeafletMouseEvent} from "leaflet";
     import RouteOverview from "./RouteOverview.svelte";
-    import {getClosestStation, Point} from "./api";
+    import {getClosestStation, onError, Point} from "./api";
     import {RoutePoint, RoutePointType} from "./data";
 
-    let routepoints: RoutePoint[] = [
-        // RoutePoint.randomColour("Amsterdam", RoutePointType.SingleStation, 0, 0),
-        // RoutePoint.randomColour("Delft", RoutePointType.SingleStation, 0, 0),
-        // RoutePoint.randomColour("Maastricht", RoutePointType.SingleStation, 0, 0),
-        // RoutePoint.randomColour("Rotterdam", RoutePointType.SingleStation, 0, 0),
-    ];
+    let routepoints: RoutePoint[] = [];
     let points: Point[] = [];
 
     let mapOptions = {
@@ -33,12 +28,22 @@
         });
 
         if (closest !== null) {
-            routepoints = [...routepoints, RoutePoint.randomColour(
-                closest.name,
-                RoutePointType.SingleStation,
-                closest.lat,
-                closest.lng,
-            )];
+            const found = routepoints.find((i) => {
+                return i.description == closest.name;
+            });
+            if (typeof found !== "undefined") {
+                onError("duplicate station");
+            } else {
+                const rp = RoutePoint.randomColour(
+                    closest.name,
+                    RoutePointType.SingleStation,
+                )
+
+                rp.lat = closest.lat;
+                rp.lng = closest.lng;
+
+                routepoints = [...routepoints, rp];
+            }
         }
 
         points.splice(new_length - 1, 1);
@@ -72,33 +77,76 @@
         attribution: "© OpenStreetMap contributors",
     };
 
+    const split = (index) => {
+        const route = routepoints[index];
+        if (route.type == RoutePointType.SingleStation) {
+            return;
+        }
+
+        routepoints[index] = route.fromobj;
+        routepoints.splice(index + 1, 0, route.toobj);
+        routepoints = routepoints;
+    }
+
+    const focus = (lat, lng, zoom) => {
+        const map = leafletMap.getMap();
+
+        let pzoom = typeof zoom !== "undefined"?zoom: 8;
+        map.setView(new LatLng(lat, lng), pzoom);
+    }
+
+    const remove = (index) => {
+        routepoints.splice(index, 1);
+        routepoints = routepoints;
+    }
+
+    const merge = (indexa, indexb) => {
+        const olda = routepoints[indexa];
+        const oldb = routepoints[indexb];
+
+        const astart = olda.type === RoutePointType.SingleStation ? olda.description : olda.from;
+        const bend = oldb.type === RoutePointType.SingleStation ? oldb.description : oldb.to;
+
+        routepoints[indexa] = new RoutePoint(
+            "",
+            olda.colour,
+            RoutePointType.Route,
+        )
+
+        routepoints[indexa].from = astart;
+        routepoints[indexa].to = bend;
+        routepoints[indexa].fromobj = olda;
+        routepoints[indexa].toobj = oldb;
+
+
+        routepoints.splice(indexb, 1);
+
+        routepoints = routepoints;
+    }
+
     let leafletMap: LeafletMap;
+
 </script>
 
 <div class="main">
-    <RouteOverview routes="{routepoints}"/>
+    <RouteOverview routes="{routepoints}" focus="{focus}" remove="{remove}" merge="{merge}" split="{split}" />
 
     <LeafletMap bind:this={leafletMap} bind:options={mapOptions} on:click={onMapClick}>
         <TileLayer url={tileUrl} options={tileLayerOptions}/>
         <TileLayer url={railUrl} options={tileLayerOptions}/>
 
         {#each points as point}
-            <CircleMarker latLng={[point.lat, point.lng]} />
+            <CircleMarker latLng={[point.lat, point.lng]} radius="{15}"/>
         {/each}
 
         {#each routepoints as point}
-            <CircleMarker latLng={[point.lat, point.lng]} color="{point.colour}"/>
+            {#if point.type === RoutePointType.SingleStation}
+                <CircleMarker latLng={[point.lat, point.lng]} color="{point.colour}" radius="{15}"/>
+            {:else}
+                <CircleMarker latLng={[point.getLatFrom(), point.fromobj.getLngFrom()]} color="{point.colour}" radius="{15}"/>
+                <CircleMarker latLng={[point.getLatTo(), point.getLngTo()]} color="{point.colour}" radius="{15}"/>
+            {/if}
         {/each}
-        <!--        <Polygon latLngs={TestData.sentosaPolygon} color="#ff0000" fillColor="#ff0000">-->
-        <!--            <Popup>Sentosa</Popup>-->
-        <!--            <Tooltip>Sentosa</Tooltip>-->
-        <!--        </Polygon>-->
-        <!--{#each TestData.sentosaPolygon as point}-->
-        <!--    <CircleMarker latLng={point} radius={3} color="#ff0000" fillColor="#ff0000">-->
-        <!--        <Popup>{point}</Popup>-->
-        <!--        <Tooltip>{point}</Tooltip>-->
-        <!--    </CircleMarker>-->
-        <!--{/each}-->
     </LeafletMap>
 </div>
 

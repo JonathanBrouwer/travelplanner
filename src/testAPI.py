@@ -29,3 +29,11 @@ class TestClass(unittest.TestCase):
         result = api.get_route_between_stations({ "start": {"lat": 0.0, "lng": 0.0}, "end":{"lat": 4.0, "lng": 4.0}})
         print(result)
         assert Segment([Point(0.0, 0.0), Point(0.5, 0.5)], "11") in result
+
+
+    def test_fuzzy_search(self):
+        stations = {Point(0.0, 0.0): "Zero", Point(1.0, 1.0): "One", Point(100.0, 100.0): "Hundred"}
+        api = API(stations)
+        result = api.fuzzy_search("Hund")
+        print(result)
+        # assert result == [Station(Point(100.0, 100.0), "Hundred")]

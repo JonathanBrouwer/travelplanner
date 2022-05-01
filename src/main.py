@@ -22,7 +22,19 @@ class ClosestPoint(Resource):
             "name": station.name,
         }
 
+class FuzzySearch(Resource):
+    def post(self):
+        parser = reqparse.RequestParser()
+        parser.add_argument('name', type=str, location='json')
+        args = parser.parse_args()
+        stations = interface.fuzzy_search(args["name"])
+
+        return {
+            "result": [{"name": station.name, "lng": station.location.lon, "lat": station.location.lat} for station in stations]
+        }
+
 
 api.add_resource(ClosestPoint, "/closest_point")
+api.add_resource(FuzzySearch, "/fuzzy_search")
 app.run(host="0.0.0.0", port=8081, debug=True)
 

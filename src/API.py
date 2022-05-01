@@ -1,5 +1,10 @@
 from __future__ import annotations
 
+import itertools
+
+import pygtrie
+
+
 import heapq
 import math
 import copy
@@ -9,6 +14,7 @@ import data_parser
 import numpy as np
 from sklearn.neighbors import KDTree
 
+cool_data: any
 
 class API:
     station_locations: KDTree
@@ -17,16 +23,27 @@ class API:
     segment_endpoints: KDTree
     segments: dict[Point, [Segment]]
     segment_data: [[float]]
+    stations_reverse: dict[str, Point]
+    data: [[float]]
 
     @classmethod
     def load(cls):
-        data = data_parser.load_full(area="nl")
-        stations = data.stations
-        return cls(stations)
+        data = data_parser.load_full(area="eu")
+        global cool_data
+        cool_data = data
+        return cls(data.stations)
 
-    def __init__(self, stations, ways: dict[int, Segment] = None):
+    def __init__(self, stations: dict[Point, str], ways: dict[int, Segment] = None):
         self.stations = stations
         self.station_data = []  # to make the KDTree
+        self.stations_reverse = {}
+        for (k, v) in stations.items():
+            self.stations_reverse[v] = k
+
+        self.trie: pygtrie.CharTrie = pygtrie.CharTrie()
+        for station in stations.values():
+            station: str
+            self.trie[station.lower()] = station
         for value in stations:
             self.station_data.append(value.get_array())
         self.station_locations = KDTree(np.array(self.station_data))
@@ -105,3 +122,13 @@ class API:
                     heapq.heappush(start_points, (heuristic(seg.get_end())+seg.length, seg.get_end(), current[2]+seg.length, s))
             current = heapq.heappop(start_points)
         return self.make_set(current[3])
+    def fuzzy_search(self, name: str) -> [Station]:
+        name = name.lower()
+        if len(name) < 2:
+            results = []
+        else:
+            try:
+                results = list(itertools.islice(self.trie.itervalues(prefix=name), 10))
+            except:
+                results = []
+        return [Station(self.stations_reverse[res], res) for res in results]

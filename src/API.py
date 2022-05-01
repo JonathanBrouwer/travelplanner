@@ -177,7 +177,7 @@ class API:
                 s = Node(seg)
                 s.set_previous(current[3])
 
-                penalty = dis * 5
+                penalty = dis
                 new_distance = current[2] + seg.length + penalty
 
                 for point in seg.points:

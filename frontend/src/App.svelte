@@ -139,6 +139,10 @@
 
 </script>
 
+<svelte:head>
+	<title>Visual Train Planner</title>
+</svelte:head>
+
 <div class="main">
     <RouteOverview routes="{routepoints}" focus="{focus}" remove="{remove}" merge="{merge}" split="{split}"/>
 

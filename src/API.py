@@ -9,6 +9,7 @@ import data_parser
 import numpy as np
 from sklearn.neighbors import KDTree
 
+cool_data: any
 
 class API:
     station_locations: KDTree
@@ -18,8 +19,10 @@ class API:
 
     @classmethod
     def load(cls):
-        stations = data_parser.load_full()
-        return cls(stations.stations)
+        data = data_parser.load_full(area="eu")
+        global cool_data
+        cool_data = data
+        return cls(data.stations)
 
     def __init__(self, stations: dict[Point, str]):
         self.stations = stations

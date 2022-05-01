@@ -28,7 +28,7 @@ class API:
 
     @classmethod
     def load(cls):
-        data = data_parser.load_full(area="eu")
+        data = data_parser.load_full(area="nl")
         global cool_data
         cool_data = data
         return cls(data.stations, data.ways)
@@ -47,11 +47,17 @@ class API:
         for value in stations:
             self.station_data.append(value.get_array())
         self.station_locations = KDTree(np.array(self.station_data))
+
         if ways is not None:
+            new_ways: [Segment] = []
+            for way in ways.values():
+                way: Segment
+                for i in range(len(way.points) - 1):
+                    new_ways.append(Segment([way.points[i], way.points[i + 1]], way.description))
+
             self.segments = {}
             self.segment_data = []
-            print(len(ways.values()))
-            for value in ways.values():
+            for value in new_ways:
                 start = value.get_start()
                 end = value.get_end()
                 if start == end:
@@ -84,7 +90,7 @@ class API:
         ind = ind[0][0]
         point = self.segment_data[ind]
         pointt = Point(point[0], point[1])
-        if pointt.distance(Point(new_point[0][0], new_point[0][1]))> 0.01:
+        if pointt.distance(Point(new_point[0][0], new_point[0][1])) > 0.01:
             return []
         return [pointt]
 
@@ -96,14 +102,15 @@ class API:
             result.add(node.current)
         return result
 
-    def get_approximate_segments(self, point:Point) -> [Segment]:
-        ind = self.segment_endpoints.query_radius([[point.lat, point.lon]], r=0.001, return_distance=False)
+    def get_approximate_segments(self, start:Point) -> [(Segment, float)]:
+        # TODO BASE R ON COST
+        ind = self.segment_endpoints.query_radius([[start.lat, start.lon]], r=0.001, return_distance=False)
         ind = ind[0]
         result = []
         for i in ind:
             point = self.segment_data[i]
             point = Point(point[0], point[1])
-            result.extend(self.segments[point])
+            result.extend([(s, point.distance(start)) for s in self.segments[point]])
         return result
 
     def get_all_segments(self, data: dict) -> set[Segment]:
@@ -128,9 +135,8 @@ class API:
         end_point = [[end["lat"], end["lng"]]]
         end_as_point = Point(end_point[0][0], end_point[0][1])
         heuristic = lambda x: x.distance(end_as_point)  # heuristic function
-        # list of: heuristic value, actual point, total distance from start, set of segments
+        # list of: heuristic value (from point to end), actual point, total distance from start, list of segments to start
         start_points = list(map(lambda x: (heuristic(x), x, 0.0, Node(None)), self.get_segment_endpoints(start)))
-
 
         heapq.heapify(start_points)
         end_segments = self.get_segment_endpoints(end)
@@ -141,8 +147,11 @@ class API:
 
         visited = set()
 
+        count = 0
+
         current = heapq.heappop(start_points)
         while current[1] not in end_points:
+            count += 1
             if current[1] in visited:
                 if len(start_points) == 0:
                     return set()
@@ -152,13 +161,21 @@ class API:
 
             visited.add(current[1])
             new_segs = self.get_approximate_segments(current[1])
-            for seg in new_segs:
+            for (seg, dis) in new_segs:
+                seg: Segment
                 s = Node(seg)
                 s.set_previous(current[3])
-                if seg.get_start().distance(current[1]) > 0.001:
-                    heapq.heappush(start_points, (heuristic(seg.get_start())+seg.length, seg.get_start(), current[2]+seg.length, s))
+
+                penalty = dis * 5
+                new_distance = current[2] + seg.length + penalty
+
+                if seg.get_start().distance(current[1]) > seg.get_end().distance(current[1]):
+                    # heapq.heappush(start_points, (heuristic(seg.get_start()) + new_distance, seg.get_start(), new_distance, s))
+                    heapq.heappush(start_points, (heuristic(seg.get_start()), seg.get_start(), new_distance, s))
                 else:
-                    heapq.heappush(start_points, (heuristic(seg.get_end())+seg.length, seg.get_end(), current[2]+seg.length, s))
+                    # heapq.heappush(start_points, (heuristic(seg.get_end()) + new_distance, seg.get_end(), new_distance, s))
+                    heapq.heappush(start_points, (heuristic(seg.get_end()), seg.get_end(), new_distance, s))
+
 
             if len(start_points) == 0:
                 return set()

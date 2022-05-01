@@ -154,7 +154,6 @@
             {#if point.type === RoutePointType.SingleStation}
                 <CircleMarker latLng={[point.lat, point.lng]} color="{point.colour}" radius="{15}"/>
             {:else}
-                {console.log(point.segments)}
                 <Polyline latLngs={point.segments}>
                 </Polyline>
                 <CircleMarker latLng={[point.getLatFrom(), point.fromobj.getLngFrom()]} color="{point.colour}"

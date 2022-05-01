@@ -56,7 +56,7 @@ class Segment(POI):
         self.calculate_length()
 
     def __eq__(self, other):
-        return (self.points[-1], self.points[0])== (other.points[-1], other.points[0])
+        return (self.points[-1], self.points[0]) == (other.points[-1], other.points[0])
 
     def __hash__(self):
         return hash((self.points[-1], self.points[0]))
